@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+/* body, */
+:root {
+  height: 100%;
+}
+/* body {
+  margin: 0;
+  padding: 0;
+}
+ */
+body {
+  /*  margin-right: 0 !important; */
+  /*  margin: 0 !important; */
+  /*  overflow-x: hidden !important; */
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 82.8% 60.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+/* body { @apply !min-w-full; } */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  /*  body {
+    @apply bg-background text-foreground;
+  } */
+}
+/* body[data-scroll-locked] {
+  min-width: 100%;
+} */
+
+.link-stand {
+  @apply text-sm text-blue-700 hover:text-cyan-500 dark:text-cyan-400 dark:hover:text-blue-500 hover:no-underline;
+}
+.link-stand.hover\:underline:hover {
+  text-decoration-line: none !important;
+}
+
+/* for description from TinyMCE */
+.description a {
+  color: #66dcf3;
+  text-decoration: none;
+  @apply text-base text-blue-700 hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-blue-500;
+}
+.description p {
+  @apply text-base indent-2;
+}
+
+.description ul li {
+  list-style-position: inside;
+  list-style-type: circle;
+  @apply indent-0  pl-2;
+}
+
+/* https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  /* background-color: #eee; */
+  @apply rounded-md  border-2 border-blue-500 dark:border-cyan-500;
+}
+
+/* On mouse-over, add a grey background color */
+/* .checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+} */
+.checkbox-container:hover .checkmark {
+  /* background-color: #ccc; */
+  @apply rounded-md  border-2 border-cyan-500 dark:border-blue-500;
+}
+
+/* When the checkbox is checked, add a blue background */
+/* .checkbox-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+} */
+.checkbox-container input:checked ~ label .checkmark {
+  /* background-color: #2196f3; */
+  @apply bg-blue-500  dark:bg-cyan-500;
+}
+.checkbox-container:hover input:checked ~ label .checkmark {
+  /* background-color: #2196f3; */
+  @apply bg-cyan-500  dark:bg-blue-500;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ label .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+ul li {
+  list-style-position: outside;
+  list-style-type: disc;
+  @apply indent-0  pl-0;
+}
+p {
+  @apply indent-0;
+}
