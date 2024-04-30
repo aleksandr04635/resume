@@ -107,7 +107,7 @@ function page({}: Props) {
               <p>
                 Web developer proficient in the full stack of skills, necessary
                 for website creation, from various UI tools to databases,
-                specializing in MERN stack, with testing skills, with good
+                specializing in MERN stack, with testing skills, and with good
                 English.
               </p>
             </div>
@@ -245,6 +245,7 @@ function page({}: Props) {
             <ul>
               <li>html</li>
               <li>CSS</li>
+              <li>SASS</li>
               <li>Javascript, Typescript</li>
               <li>React.js</li>
               <li>Node.js, Express.js</li>
@@ -287,7 +288,7 @@ function page({}: Props) {
             </ul>
           </div>
           <h3 className=" mt-0   font-semibold">Soft skills</h3>
-          <div>
+          <div className=" mt-0  text-sm">
             <ul>
               <li>Scrum, Kanban</li>
               <li>GTD</li>

@@ -1,1 +1,3 @@
 My CV
+https://github.com/aleksandr04635/resume.git
+https://oleksandrs-resume.vercel.app/

@@ -11,4 +11,4 @@
 
 </div>
 
-<!-- The project is deployed to Vercel [here](https://oleksandrs-next-marketplace.vercel.app) -->
+The project is deployed to Vercel [here](https://oleksandrs-resume.vercel.app/)
