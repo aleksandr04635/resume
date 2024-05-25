@@ -255,19 +255,27 @@ function page({}: Props) {
               <li>Prisma ORM</li>
               <li>Redux Toolkit Query</li>
               <li>React Query</li>
-              <li>UI: Tailwind, Shadcn/ui, Flowbite</li>
-              <li>WebSocket</li>
+              <li>UI libraries: Tailwind, Shadcn/ui, Flowbite</li>
+              <li>
+                UI features: dark theme, horizontal swiping, pagination, comment
+                tree, tooltips
+              </li>
+              <li>Forms: react-hook-form, Zod, input masking</li>
+              <li>
+                Tables: tanstack/react-table, sorting, filtering, pagination
+              </li>
+              <li>WebSockets</li>
               <li>TinyMCE rich text editor</li>
               <li>Image uploading: Cloudinary, Firebase</li>
               <li>Email sending: Nodemailer, Resend</li>
               <li>Template engines: Handlebars, Pug</li>
-              <li>Forms: Zod, react-hook-form</li>
               <li>Manual QA/QC, TestRail</li>
               <li>Jest</li>
               <li>Postman, Insomnia</li>
               <li>Figma</li>
               <li>JS parsing, Puppeteer</li>
               <li>Git</li>
+              <li>Docker</li>
             </ul>
           </div>
           <h3 className=" mt-0   font-semibold">Data analysis</h3>
