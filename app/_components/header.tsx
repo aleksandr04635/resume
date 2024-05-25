@@ -37,6 +37,14 @@ export const Header = () => {
                 My&nbsp;Marketplace
               </MyButton>
             </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              className=""
+              href={`https://neurolide-cpa.vercel.app`}
+            >
+              <MyButton className=" font-semibold">My&nbsp;CPA</MyButton>
+            </Link>
           </div>
           <div className="w-full flex justify-center sm:justify-end items-center gap-2 lg:grow-[2]  ">
             <ThemeSwitch />

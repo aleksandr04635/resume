@@ -4,16 +4,91 @@ import Image from "next/image";
 
 type Props = {};
 
-export const metadata = {
-  title: "My Resume",
-  description: "Oleksandr Liashchenko - Full-stack web-developer",
-};
-
-function page({}: Props) {
+//max-w-[1050px]
+function MainContent({}: Props) {
   return (
-    <div className="mx-auto max-w-[1050px] px-1 py-4   text-justify ">
-      <div className=" flex flex-row gap-6 mt-0">
-        <div className="flex flex-col">
+    <div className="mx-auto  px-1 py-4   text-justify ">
+      <div className=" flex flex-row gap-5 mt-0 max-w-[1150px] mx-auto">
+        <div className=" flex flex-col gap-2 mt-2 min-w-[220px]">
+          <h2 className=" mt-0  text-base font-semibold">Skills</h2>
+          <h3 className=" mt-0  text-base font-semibold">Web Development</h3>
+          <div className=" mt-0  text-sm">
+            <ul>
+              <li>html</li>
+              <li>CSS</li>
+              <li>SASS</li>
+              <li>Javascript, Typescript</li>
+              <li>React.js</li>
+              <li>Node.js, Express.js</li>
+              <li>Next.js</li>
+              <li>Mongo/Mongoose</li>
+              <li>MySQL, Postgres</li>
+              <li>Prisma ORM</li>
+              <li>Redux Toolkit Query</li>
+              <li>React Query</li>
+              <li>UI libraries: Tailwind, Shadcn/ui, Flowbite</li>
+              <li>
+                UI features: dark theme, horizontal swiping, pagination, comment
+                tree, tooltips
+              </li>
+              <li>Forms: react-hook-form, Zod, input masking</li>
+              <li>
+                Tables: tanstack/react-table, sorting, filtering, pagination
+              </li>
+              <li>WebSockets</li>
+              <li>TinyMCE rich text editor</li>
+              <li>Image uploading: Cloudinary, Firebase</li>
+              <li>Email sending: Nodemailer, Resend</li>
+              <li>Template engines: Handlebars, Pug</li>
+              <li>Manual QA/QC, TestRail</li>
+              <li>Jest</li>
+              <li>Postman, Insomnia</li>
+              <li>Figma</li>
+              <li>JS parsing, Puppeteer</li>
+              <li>Git</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+          <h3 className=" mt-0   font-semibold">Data analysis</h3>
+          <div className=" mt-0  text-sm">
+            <ul>
+              <li>Python: Pandas, NumPy, Matplotlib, SciPy</li>
+              <li>Mathematica, Maple</li>
+              <li>Tableau</li>
+              <li>Excel, PowerPoint</li>
+            </ul>
+          </div>
+          <h3 className=" mt-0   font-semibold">Languages</h3>
+          <div className=" mt-0  text-sm">
+            <ul>
+              <li>Ukrainian, Russian: native</li>
+              <li>English: C1</li>
+              <li>Polish: B1</li>
+            </ul>
+          </div>
+          <h3 className=" mt-0   font-semibold">Soft skills</h3>
+          <div className=" mt-0  text-sm">
+            <ul>
+              <li>Scrum, Kanban</li>
+              <li>GTD</li>
+              <li>Teamwork</li>
+            </ul>
+          </div>
+          <h3 className=" mt-0   font-semibold">Science</h3>
+          <div className=" mt-0  text-sm">
+            <ul>
+              <li>
+                Theoretical Physics: Quantum Mechanics in non-linear spaces
+              </li>
+              <li>
+                Mathematics in the volume, necessary for theoretical physics:
+                Calculus, Linear algebra, Group Theory
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="flex flex-col ">
           <div className=" flex flex-row gap-6 mt-0">
             <div className="relative w-[200px] h-[200px] ">
               <Image
@@ -123,13 +198,14 @@ function page({}: Props) {
                 documentation of used libraries. You can become sure of it just
                 by looking at these sites.
               </p>
+
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
                 className=""
                 href={`https://oleksandrs-mern-blog.vercel.app`}
               >
-                <h3 className="link-stand mt-0  !text-base font-semibold">
+                <h3 className="link-stand mt-1  !text-base font-semibold">
                   My Blog
                 </h3>
               </Link>
@@ -165,13 +241,14 @@ function page({}: Props) {
                   .
                 </p>
               </div>
+
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
                 className=""
                 href={`https://oleksandrs-next-marketplace.vercel.app`}
               >
-                <h3 className="link-stand mt-0  !text-base font-semibold">
+                <h3 className="link-stand mt-1  !text-base font-semibold">
                   My Marketplace
                 </h3>
               </Link>
@@ -218,17 +295,71 @@ function page({}: Props) {
                 </p>
               </div>
             </div>
-            <div>
-              <h2 className=" mt-2  text-base font-semibold">Experience</h2>
-              <p>Junior Researcher in Particles Physics in Non-linear Spaces</p>
-              <p>
-                Bogolyubov Institute for Theoretical Physics of the National
-                Academy of Sciences of Ukraine, Kyiv
-              </p>
-              <p>09.2011-07.2023 </p>
+
+            <div className=" space-y-1 mt-1 text-sm">
+              <h2 className="   text-base font-semibold">Experience</h2>
+              <div>
+                <h3 className="  text-base font-semibold">
+                  Full-stack web developer in SMM Oksima Group
+                </h3>
+                <p>
+                  Working on this
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-stand pl-1 "
+                    href={`https://www.figma.com/design/9lKt9ETfOEyiA4H1MU0HFv/%D0%A6%D0%9F%D0%90-%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D0%B0-(Copy)?m=dev&node-id=0-1&t=BCix09wwPlWuvMe0-1`}
+                  >
+                    Figma design
+                  </Link>
+                  , which had been developed in parallel to my work on it, in
+                  close communication with the product owner and the graphical
+                  designer on constantly changing requirements and design ideas,
+                  I created
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-stand pl-1 "
+                    href={`https://neurolide-cpa.vercel.app`}
+                  >
+                    this CPA
+                  </Link>
+                  &nbsp;myself.
+                </p>
+                <p>
+                  It enables user authentication with the role of a Brand or an
+                  Affiliate, with email and password using Auth.js, with email
+                  verification and password resetting via email sending, input
+                  user data made with react-hook-form with user input masking
+                  and Zod input validation, and output of them in the form of
+                  tables on wide screens, that are shown as a horizontally
+                  swipeable by gestures lists on mobile devices for creation of
+                  advertisement offers by the users with the status of Brand,
+                  and media channels, by the users with the status of Affiliate,
+                  which they own and offer the placement of the advertisements
+                  there, and with the ability of Affiliates to accept
+                  advertisement offers from Brands. Users with the status of
+                  Manager in the current version manage all the financial
+                  operations manually, and verify the status of offers and media
+                  channels, being able to edit them as well as all the financial
+                  properties of the users.
+                </p>
+                <p>04.2024-05.2024 </p>
+              </div>
+              <div>
+                <h3 className="  text-base font-semibold">
+                  Junior Researcher in Particles Physics in Non-linear Spaces
+                </h3>
+                <p>
+                  Bogolyubov Institute for Theoretical Physics of the National
+                  Academy of Sciences of Ukraine, Kyiv
+                </p>
+                <p>09.2011-10.2023 </p>
+              </div>
             </div>
-            <div>
-              <h2 className=" mt-2  text-base font-semibold">Education</h2>
+
+            <div className=" space-y-1 mt-1 text-sm">
+              <h2 className=" mt-1  text-base font-semibold">Education</h2>
               <p>Master of Science in Particle Physics </p>
               <p>
                 Taras Shevchenko National University of Kyiv, Faculty of Physics
@@ -237,88 +368,9 @@ function page({}: Props) {
             </div>
           </div>
         </div>
-
-        <div className=" flex flex-col gap-2 mt-2 min-w-[220px]">
-          <h2 className=" mt-0  text-base font-semibold">Skills</h2>
-          <h3 className=" mt-0  text-base font-semibold">Web Development</h3>
-          <div className=" mt-0  text-sm">
-            <ul>
-              <li>html</li>
-              <li>CSS</li>
-              <li>SASS</li>
-              <li>Javascript, Typescript</li>
-              <li>React.js</li>
-              <li>Node.js, Express.js</li>
-              <li>Next.js</li>
-              <li>Mongo/Mongoose</li>
-              <li>MySQL, Postgres</li>
-              <li>Prisma ORM</li>
-              <li>Redux Toolkit Query</li>
-              <li>React Query</li>
-              <li>UI libraries: Tailwind, Shadcn/ui, Flowbite</li>
-              <li>
-                UI features: dark theme, horizontal swiping, pagination, comment
-                tree, tooltips
-              </li>
-              <li>Forms: react-hook-form, Zod, input masking</li>
-              <li>
-                Tables: tanstack/react-table, sorting, filtering, pagination
-              </li>
-              <li>WebSockets</li>
-              <li>TinyMCE rich text editor</li>
-              <li>Image uploading: Cloudinary, Firebase</li>
-              <li>Email sending: Nodemailer, Resend</li>
-              <li>Template engines: Handlebars, Pug</li>
-              <li>Manual QA/QC, TestRail</li>
-              <li>Jest</li>
-              <li>Postman, Insomnia</li>
-              <li>Figma</li>
-              <li>JS parsing, Puppeteer</li>
-              <li>Git</li>
-              <li>Docker</li>
-            </ul>
-          </div>
-          <h3 className=" mt-0   font-semibold">Data analysis</h3>
-          <div className=" mt-0  text-sm">
-            <ul>
-              <li>Python: Pandas, NumPy, Matplotlib, SciPy</li>
-              <li>Mathematica, Maple</li>
-              <li>Tableau</li>
-              <li>Excel, PowerPoint</li>
-            </ul>
-          </div>
-          <h3 className=" mt-0   font-semibold">Languages</h3>
-          <div className=" mt-0  text-sm">
-            <ul>
-              <li>Ukrainian, Russian: native</li>
-              <li>English: C1</li>
-              <li>Polish: B1</li>
-            </ul>
-          </div>
-          <h3 className=" mt-0   font-semibold">Soft skills</h3>
-          <div className=" mt-0  text-sm">
-            <ul>
-              <li>Scrum, Kanban</li>
-              <li>GTD</li>
-              <li>Teamwork</li>
-            </ul>
-          </div>
-          <h3 className=" mt-0   font-semibold">Science</h3>
-          <div className=" mt-0  text-sm">
-            <ul>
-              <li>
-                Theoretical Physics: Quantum Mechanics in non-linear spaces
-              </li>
-              <li>
-                Mathematics in the volume, necessary for theoretical physics:
-                Calculus, Linear algebra, Group Theory
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
   );
 }
 
-export default page;
+export default MainContent;

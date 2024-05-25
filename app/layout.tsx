@@ -1,20 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { SessionProvider } from "next-auth/react";
 
 import "./globals.css";
-
-import { Header } from "./_components/header";
-import { Footer } from "./_components/footer";
-import { ThemeProvider } from "./_components/theme-provider";
-
-//import StoreProvider from "./_components/store-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My Marketplace",
-  description: "A marketplace created with Next.js 14 and Prisma",
+  title: "My CV - Oleksandr Liashchenko",
+  description:
+    "A CV created with Next.js 14 by Oleksandr Liashchenko - Full-stack web-developer",
 };
 
 export default async function RootLayout({
@@ -28,18 +22,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className="w-screen overflow-x-hidden ">
         <div className={` ${inter.className}`}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div
-              className="  relative w-full flex flex-col    min-h-screen bg-white
-     bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))]
-      dark:from-[#065179] dark:to-[#0e1425]"
-            >
-               <Header />
-              <div className=" mb-[63px] pr-[20px]">{children}</div>
-              <Footer /> 
-            {/*   {children} */}
-            </div>
-          </ThemeProvider>
+          <div className=" ">{children}</div>
         </div>
       </body>
     </html>

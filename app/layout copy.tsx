@@ -34,9 +34,10 @@ export default async function RootLayout({
      bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))]
       dark:from-[#065179] dark:to-[#0e1425]"
             >
-              <Header />
+               <Header />
               <div className=" mb-[63px] pr-[20px]">{children}</div>
-              <Footer />
+              <Footer /> 
+            {/*   {children} */}
             </div>
           </ThemeProvider>
         </div>
