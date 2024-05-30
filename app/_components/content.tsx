@@ -4,6 +4,63 @@ import Image from "next/image";
 
 type Props = {};
 
+/* function calculateTeamFinanceReport1(salaries: any, team: any) {
+  const costObj: any = { totalBudgetTeam: 0 };
+  for (let x in salaries) {
+    costObj["totalBudget" + x] = 0;
+  }
+  team.forEach((member: any) => {
+    if (salaries[member.specialization]) {
+      console.log(salaries[member.specialization]);
+      console.log(Number(salaries[member.specialization].tax.slice(0, -1)));
+
+      let num =
+        Math.round(
+          (salaries[member.specialization].salary /
+            (1 -
+              Number(salaries[member.specialization].tax.slice(0, -1)) / 100)) *
+            100
+        ) / 100;
+
+      console.log(num);
+      costObj.totalBudgetTeam += num;
+      costObj["totalBudget" + member.specialization] += num;
+    }
+  });
+  costObj.totalBudgetTeam = Math.trunc(costObj.totalBudgetTeam);
+  for (let x in salaries) {
+    costObj["totalBudget" + x] = Math.trunc(costObj["totalBudget" + x]);
+  }
+  return costObj;
+}
+const salaries1 = {
+  Manager: { salary: 1000, tax: "10%" },
+  Designer: { salary: 600, tax: "30%" },
+  Artist: { salary: 1500, tax: "15%" },
+};
+const team1 = [
+  { name: "Misha", specialization: "Manager" },
+  { name: "Max", specialization: "Designer" },
+  { name: "Vova", specialization: "Designer" },
+  { name: "Leo", specialization: "Artist" },
+];
+const financeReport1 = calculateTeamFinanceReport1(salaries1, team1);
+console.log(JSON.stringify(financeReport1));
+
+const salaries2 = {
+  TeamLead: { salary: 1000, tax: "99%" },
+  Architect: { salary: 9000, tax: "34%" },
+};
+const team2 = [
+  { name: "Alexander", specialization: "TeamLead" },
+  { name: "Gaudi", specialization: "Architect" },
+  { name: "Koolhas", specialization: "Architect" },
+  { name: "Foster", specialization: "Architect" },
+  { name: "Napoleon", specialization: "General" },
+];
+const financeReport2 = calculateTeamFinanceReport1(salaries2, team2);
+console.log(JSON.stringify(financeReport2)); */
+
 //max-w-[1050px]
 function MainContent({}: Props) {
   return (
@@ -12,7 +69,7 @@ function MainContent({}: Props) {
         <div className=" flex flex-col gap-2 mt-2 min-w-[220px]">
           <h2 className=" mt-0  text-base font-semibold">Skills</h2>
           <h3 className=" mt-0  text-base font-semibold">Web Development</h3>
-          <div className=" mt-0  text-sm">
+          <div className=" mt-0 text-left text-sm">
             <ul>
               <li>html</li>
               <li>CSS</li>
@@ -28,8 +85,8 @@ function MainContent({}: Props) {
               <li>React Query</li>
               <li>UI libraries: Tailwind, Shadcn/ui, Flowbite</li>
               <li>
-                UI features: dark theme, horizontal swiping, pagination, comment
-                tree, tooltips
+                UI features: dark theme, horizontal swiping, pagination,
+                comments tree, tooltips
               </li>
               <li>Forms: react-hook-form, Zod, input masking</li>
               <li>
@@ -41,10 +98,12 @@ function MainContent({}: Props) {
               <li>Email sending: Nodemailer, Resend</li>
               <li>Template engines: Handlebars, Pug</li>
               <li>Manual QA/QC, TestRail</li>
-              <li>Jest</li>
-              <li>Postman, Insomnia</li>
+              <li>React Testing Library, Jest</li>
+              <li>Postman, Insomnia, Thunder Client</li>
               <li>Figma</li>
               <li>JS parsing, Puppeteer</li>
+              <li>Stripe</li>
+              <li>Jira</li>
               <li>Git</li>
               <li>Docker</li>
             </ul>
@@ -69,7 +128,7 @@ function MainContent({}: Props) {
           <h3 className=" mt-0   font-semibold">Soft skills</h3>
           <div className=" mt-0  text-sm">
             <ul>
-              <li>Scrum, Kanban</li>
+              <li>Scrum</li>
               <li>GTD</li>
               <li>Teamwork</li>
             </ul>
@@ -103,7 +162,7 @@ function MainContent({}: Props) {
                 Oleksandr Liashchenko
               </h1>
               <h3 className=" mb-2  text-base font-semibold">
-                Junior Full-stack Web Developer
+                Full Stack Web Developer
               </h3>
               <div className=" mb-2 w-full text-sm flex flex-row">
                 <div>Kyiv, Ukraine; </div>
@@ -181,7 +240,7 @@ function MainContent({}: Props) {
               <h2 className=" mt-1  text-lg font-semibold">Summary</h2>
               <p>
                 Web developer proficient in the full stack of skills, necessary
-                for website creation, from various UI tools to databases,
+                for web apps creation, from various UI tools to databases,
                 specializing in MERN stack, with testing skills, and with good
                 English.
               </p>
@@ -303,7 +362,25 @@ function MainContent({}: Props) {
                   Full-stack web developer in SMM Oksima Group
                 </h3>
                 <p>
-                  Working on this
+                  I created a
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-stand pl-1 "
+                    href={`https://oleksandrs-test-landing-page.vercel.app/`}
+                  >
+                    landing page
+                  </Link>{" "}
+                  based on this
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-stand pl-1 "
+                    href={`https://www.figma.com/design/E1Uy4MnJgSpWoDv6XTc8Rz/Bloggers-platform?node-id=0-1&t=AhUii3sjs3fhZmRf-0`}
+                  >
+                    Figma wireframe
+                  </Link>{" "}
+                  and then, working on this
                   <Link
                     target="_blank"
                     rel="noopener noreferrer"
@@ -327,21 +404,22 @@ function MainContent({}: Props) {
                   &nbsp;myself.
                 </p>
                 <p>
-                  It enables user authentication with the role of a Brand or an
-                  Affiliate, with email and password using Auth.js, with email
-                  verification and password resetting via email sending, input
-                  user data made with react-hook-form with user input masking
-                  and Zod input validation, and output of them in the form of
-                  tables on wide screens, that are shown as a horizontally
-                  swipeable by gestures lists on mobile devices for creation of
-                  advertisement offers by the users with the status of Brand,
-                  and media channels, by the users with the status of Affiliate,
-                  which they own and offer the placement of the advertisements
-                  there, and with the ability of Affiliates to accept
-                  advertisement offers from Brands. Users with the status of
-                  Manager in the current version manage all the financial
-                  operations manually, and verify the status of offers and media
-                  channels, being able to edit them as well as all the financial
+                  Working on Next.js 14 with PostgreSQL/Prisma ORM, it enables
+                  user authentication with the role of a Brand or an Affiliate,
+                  with the combination of email and password using Auth.js, with
+                  email verification and password resetting via email sending,
+                  inputs user data in forms made with react-hook-form with user
+                  input masking and Zod input validation, and outputs them in
+                  the form of tables on wide screens, which are shown as
+                  horizontally swipeable by gestures lists on mobile devices for
+                  creation of advertisement Offers by the users with the status
+                  of Brand, and Media Channels, by the users with the status of
+                  Affiliate, which they own and offer the placement of the
+                  advertisements there, and with the ability of Affiliates to
+                  accept advertisement Offers from Brands. Users with the status
+                  of Manager in the current version manage all the financial
+                  operations manually, and verify the status of Offers and Media
+                  Channels, being able to edit them as well as all the financial
                   properties of the users.
                 </p>
                 <p>04.2024-05.2024 </p>
