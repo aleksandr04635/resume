@@ -46,7 +46,17 @@ export const Header = () => {
               <MyButton className=" font-semibold">My&nbsp;CPA</MyButton>
             </Link>
           </div>
-          <div className="w-full flex justify-center sm:justify-end items-center gap-2 lg:grow-[2]  ">
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            className=""
+            href={`/pdf`}
+          >
+            <h3 className="link-stand text-center text-sm ">
+              version for PDF creation
+            </h3>
+          </Link>
+          <div className="w-fit flex justify-center sm:justify-end items-center gap-2  ">
             <ThemeSwitch />
           </div>
         </div>

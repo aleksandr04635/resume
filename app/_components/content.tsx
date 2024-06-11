@@ -100,16 +100,17 @@ function MainContent({}: Props) {
               <li>Manual QA/QC, TestRail</li>
               <li>React Testing Library, Jest</li>
               <li>Postman, Insomnia, Thunder Client</li>
+              <li>Gulp</li>
               <li>Figma</li>
               <li>JS parsing, Puppeteer</li>
               <li>Stripe</li>
               <li>Jira</li>
-              <li>Git</li>
+              <li>Git: Github, Gitlab</li>
               <li>Docker</li>
             </ul>
           </div>
-          <h3 className=" mt-0   font-semibold">Data analysis</h3>
-          <div className=" mt-0  text-sm">
+          <h3 className=" mt-0   font-semibold text-left">Data analysis</h3>
+          <div className=" mt-0  text-sm text-left">
             <ul>
               <li>Python: Pandas, NumPy, Matplotlib, SciPy</li>
               <li>Mathematica, Maple</li>
@@ -128,13 +129,13 @@ function MainContent({}: Props) {
           <h3 className=" mt-0   font-semibold">Soft skills</h3>
           <div className=" mt-0  text-sm">
             <ul>
-              <li>Scrum</li>
-              <li>GTD</li>
+              <li>Kanban, Scrum</li>
               <li>Teamwork</li>
+              <li>GTD</li>
             </ul>
           </div>
-          <h3 className=" mt-0   font-semibold">Science</h3>
-          <div className=" mt-0  text-sm">
+          <h3 className=" mt-0   font-semibold text-left ">Science</h3>
+          <div className=" mt-0  text-sm text-left ">
             <ul>
               <li>
                 Theoretical Physics: Quantum Mechanics in non-linear spaces
@@ -237,12 +238,12 @@ function MainContent({}: Props) {
           </div>
           <div className=" flex flex-col gap-2 mt-0">
             <div>
-              <h2 className=" mt-1  text-lg font-semibold">Summary</h2>
-              <p>
-                Web developer proficient in the full stack of skills, necessary
-                for web apps creation, from various UI tools to databases,
-                specializing in MERN stack, with testing skills, and with good
-                English.
+              <h2 className=" mt-1  text-base font-semibold">Summary</h2>
+              <p className="text-sm">
+                I&apos;m a Web Developer with teamwork experience, proficient in
+                the full stack of skills, necessary for web apps creation, from
+                various UI tools to databases, specializing in MERN stack, with
+                testing skills, and with English on the level C1-C2.
               </p>
             </div>
             <div className="text-sm">
@@ -250,10 +251,8 @@ function MainContent({}: Props) {
               <p>
                 I have made both these projects myself, starting from the user
                 stories made up by me, and then from the database structure to
-                the UI design I created and integrated both elements of existing
-                projects, which I used as a reference (5 projects, I brougth to
-                full understanding and deployment for creation of the blog and 6
-                for the marketplace), and materials directly from the technical
+                the UI design I created and integrated both elements of the
+                existing projects and materials directly from the technical
                 documentation of used libraries. You can become sure of it just
                 by looking at these sites.
               </p>
@@ -359,7 +358,26 @@ function MainContent({}: Props) {
               <h2 className="   text-base font-semibold">Experience</h2>
               <div>
                 <h3 className="  text-base font-semibold">
-                  Full-stack web developer in SMM Oksima Group
+                  Front-End Web Developer in Fernir
+                </h3>
+                <p>
+                  Working in a team on a shared Gitlab repository with workflow
+                  focused around a Gitlab task board and with Gitlab CI/CD
+                  integration I worked on remaking an Angular front part of an
+                  application to Next.js. The work was complicated by the
+                  application architecture being inherited from Angular to a
+                  great extent, with all the functions being provided by
+                  services with dependencies injections, but I managed to
+                  familiarize myself with the extensive project, develop quite a
+                  few components and services, and implement the Zod forms
+                  validation system for the application. I cannot show the
+                  particulars of my work due to a non-disclosure agreement.
+                </p>
+                <p>05.2024-Now</p>
+              </div>
+              <div>
+                <h3 className="  text-base font-semibold">
+                  Full-Stack Web Developer in SMM Oksima Group
                 </h3>
                 <p>
                   I created a
