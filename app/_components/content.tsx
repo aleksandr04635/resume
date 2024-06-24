@@ -238,7 +238,7 @@ function MainContent({}: Props) {
           </div>
           <div className=" flex flex-col gap-2 mt-0">
             <div>
-              <h2 className=" mt-1  text-base font-semibold">Summary</h2>
+              <h2 className=" mt-2  text-base font-semibold">Summary</h2>
               <p className="text-sm">
                 I&apos;m a Web Developer with teamwork experience, proficient in
                 the full stack of skills, necessary for web apps creation, from
@@ -247,7 +247,7 @@ function MainContent({}: Props) {
               </p>
             </div>
             <div className="text-sm">
-              <h2 className=" mt-0  text-base font-semibold">My Projects</h2>
+              <h2 className=" mt-1  text-base font-semibold">My Projects</h2>
               <p>
                 I have made both these projects myself, starting from the user
                 stories made up by me, and then from the database structure to
@@ -263,7 +263,7 @@ function MainContent({}: Props) {
                 className=""
                 href={`https://oleksandrs-mern-blog.vercel.app`}
               >
-                <h3 className="link-stand mt-1  !text-base font-semibold">
+                <h3 className="link-stand mt-2  !text-base font-semibold">
                   My Blog
                 </h3>
               </Link>
@@ -306,7 +306,7 @@ function MainContent({}: Props) {
                 className=""
                 href={`https://oleksandrs-next-marketplace.vercel.app`}
               >
-                <h3 className="link-stand mt-1  !text-base font-semibold">
+                <h3 className="link-stand mt-2  !text-base font-semibold">
                   My Marketplace
                 </h3>
               </Link>
@@ -354,7 +354,7 @@ function MainContent({}: Props) {
               </div>
             </div>
 
-            <div className=" space-y-1 mt-1 text-sm">
+            <div className=" space-y-1 mt-2 text-sm">
               <h2 className="   text-base font-semibold">Experience</h2>
               <div>
                 <h3 className="  text-base font-semibold">
@@ -362,7 +362,7 @@ function MainContent({}: Props) {
                   <Link
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="link-stand pl-1 "
+                    className="link-stand pl-1 !text-lg !font-semibold"
                     href={`https://www.linkedin.com/company/fernir/`}
                   >
                     Fernir
@@ -389,7 +389,7 @@ function MainContent({}: Props) {
                 </p>
                 <p>05.2024-Now</p>
               </div>
-              <div>
+              <div className="pt-2">
                 <h3 className="  text-base font-semibold">
                   Full-Stack Web Developer in SMM Oksima Group
                 </h3>
@@ -457,7 +457,7 @@ function MainContent({}: Props) {
                 <p>04.2024-05.2024 </p>
               </div>
               <div>
-                <h3 className="  text-base font-semibold">
+                <h3 className=" pt-2 text-base font-semibold">
                   Junior Researcher in Particles Physics in Non-linear Spaces
                 </h3>
                 <p>
@@ -468,7 +468,7 @@ function MainContent({}: Props) {
               </div>
             </div>
 
-            <div className=" space-y-1 mt-1 text-sm">
+            <div className=" space-y-1 mt-2 text-sm">
               <h2 className=" mt-1  text-base font-semibold">Education</h2>
               <p>Master of Science in Particle Physics </p>
               <p>
