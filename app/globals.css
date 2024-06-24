@@ -201,9 +201,9 @@ body {
 
 ul li {
   list-style-position: outside;
-  list-style-type: disc;
-  @apply indent-0  pl-0;
+  list-style-type: circle;
+  @apply indent-0  pl-0  py-0.5;
 }
 p {
-  @apply indent-0;
+  @apply indent-2 py-0.5;
 }

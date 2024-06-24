@@ -461,20 +461,20 @@ function MainContent({}: Props) {
                 <h3 className=" pt-2 text-base font-semibold">
                   Junior Researcher in Particles Physics in Non-linear Spaces
                 </h3>
-                <p>
+                <h3>
                   Bogolyubov Institute for Theoretical Physics of the National
                   Academy of Sciences of Ukraine, Kyiv
-                </p>
+                </h3>
                 <p>09.2011-10.2023 </p>
               </div>
             </div>
 
             <div className=" space-y-1 mt-2 text-sm">
               <h2 className=" mt-1  text-base font-semibold">Education</h2>
-              <p>Master of Science in Particle Physics </p>
-              <p>
+              <h3>Master of Science in Particle Physics </h3>
+              <h3>
                 Taras Shevchenko National University of Kyiv, Faculty of Physics
-              </p>
+              </h3>
               <p>09.2005-06.2011 </p>
             </div>
           </div>
