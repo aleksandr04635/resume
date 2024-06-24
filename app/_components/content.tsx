@@ -122,8 +122,8 @@ function MainContent({}: Props) {
           <div className=" mt-0  text-sm">
             <ul>
               <li>Ukrainian, Russian: native</li>
-              <li>English: C1</li>
-              <li>Polish: B1</li>
+              <li>English: C1-C2</li>
+              <li>Polish: B1-B2</li>
             </ul>
           </div>
           <h3 className=" mt-0   font-semibold">Soft skills</h3>
@@ -372,6 +372,11 @@ function MainContent({}: Props) {
                   few components and services, and implement the Zod forms
                   validation system for the application. I cannot show the
                   particulars of my work due to a non-disclosure agreement.
+                </p>
+                <p>
+                  I have been promoted to a supervisor and performed the reviews
+                  of code, created by two other junior developers, merged merge
+                  requests, created by them, created and destributed tasks.
                 </p>
                 <p>05.2024-Now</p>
               </div>
