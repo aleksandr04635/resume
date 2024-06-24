@@ -358,7 +358,15 @@ function MainContent({}: Props) {
               <h2 className="   text-base font-semibold">Experience</h2>
               <div>
                 <h3 className="  text-base font-semibold">
-                  Front-End Web Developer in Fernir
+                  Front-End Web Developer in{" "}
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-stand pl-1 "
+                    href={`https://www.linkedin.com/company/fernir/`}
+                  >
+                    Fernir
+                  </Link>
                 </h3>
                 <p>
                   Working in a team on a shared Gitlab repository with workflow
@@ -370,8 +378,9 @@ function MainContent({}: Props) {
                   services with dependencies injections, but I managed to
                   familiarize myself with the extensive project, develop quite a
                   few components and services, and implement the Zod forms
-                  validation system for the application. I cannot show the
-                  particulars of my work due to a non-disclosure agreement.
+                  validation system for the application and tables resizing
+                  system. I cannot show the particulars of my work due to a
+                  non-disclosure agreement.
                 </p>
                 <p>
                   I have been promoted to a supervisor and performed the reviews
