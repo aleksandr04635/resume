@@ -384,8 +384,9 @@ function MainContent({}: Props) {
                 </p>
                 <p>
                   I have been promoted to a supervisor and performed the reviews
-                  of code, created by two other junior developers, merged merge
-                  requests, created by them, created and destributed tasks.
+                  of the code, created by two other junior developers, merged
+                  merge requests, created by them, created and distributed
+                  tasks.
                 </p>
                 <p>05.2024-Now</p>
               </div>
