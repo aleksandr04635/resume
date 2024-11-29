@@ -14,7 +14,7 @@ export const Header = () => {
   return (
     <nav
       className=" bg-white dark:bg-dark-additional-bg/40  
-    pl-1 sm:pl-4 py-1 sm:py-3  sm:pr-[35px] w-full h-fit shadow-sm border-layout-border border-b"
+    pl-1 sm:pl-4 py-1 sm:py-3  sm:pr-[35px] w-full h-fit shadow-sm border-layout-border border-b dark:border-none"
     >
       <div className="flex w-full flex-col">
         <div className="w-full flex flex-col sm:flex-row justify-between items-center gap-1 sm:gap-5 ">
