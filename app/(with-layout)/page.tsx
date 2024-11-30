@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import MainContent from "../_components/content";
+import MainContent from "../_components/main-content";
 
 type Props = {};
 
@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 function page({}: Props) {
-  return <MainContent />;
+  return <MainContent pageType="site" />;
 }
 
 export default page;

@@ -1,14 +1,21 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import { sideList } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
-type Props = {};
+type Props = { pageType: "site" | "pdf" };
 
-export function SideList({}: Props) {
+export function SideList({ pageType }: Props) {
   return (
-    <div className="mt-2 flex min-w-[220px] flex-col gap-2">
-      <ul className="">
+    <div
+      className={cn(
+        "pl-5 pr-3",
+        pageType === "site" ? "min-w-[290px]" : "min-w-[220px]",
+      )}
+    >
+      <ul className={cn("", pageType === "site" ? "text-base" : "text-sm")}>
         {sideList.map((item, i) => {
           switch (item.type) {
             case "h2":
@@ -24,7 +31,10 @@ export function SideList({}: Props) {
               return (
                 <li
                   key={i}
-                  className="mb-0 mt-2 list-none p-0 text-base font-semibold"
+                  className={cn(
+                    "mb-0 mt-2 list-none p-0 text-base font-semibold",
+                    pageType === "site" ? "mt-5 text-lg" : "mt-1 text-base",
+                  )}
                 >
                   {item.text}
                 </li>
@@ -33,7 +43,7 @@ export function SideList({}: Props) {
               return (
                 <li
                   key={i}
-                  className="mt-0 list-image-[url(/li-for-light.svg)] p-0 text-left text-sm dark:list-image-[url(/li-for-dark.svg)]"
+                  className="mt-0 list-image-[url(/li-for-light.svg)] p-0 text-left dark:list-image-[url(/li-for-dark.svg)]"
                 >
                   {item.text}
                 </li>

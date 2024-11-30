@@ -1,7 +1,6 @@
 "use client";
-//import { Footer } from "flowbite-react";
+
 import Link from "next/link";
-//import { Link, useLocation } from "react-router-dom";
 import {
   BsFacebook,
   BsInstagram,
@@ -9,22 +8,13 @@ import {
   BsGithub,
   BsDribbble,
 } from "react-icons/bs";
-//import { useSelector, useDispatch } from "react-redux";
 
 export const Footer = () => {
-  //const { pageSize } = useSelector((state) => state.pageSize);
-  //const location = useLocation();
-  //console.log(" window.location.origin: ", window.location.origin);
-  //dark:bg-transparent
-
   //absolute bottom-0  bg-secondary
   return (
-    <div
-      className="w-full  h-16 pr-[20px]  rounded-none border-t dark:border-none absolute bottom-0
-      border-layout-border bg-white dark:bg-dark-additional-bg/40 flex items-center justify-between "
-    >
+    <div className="absolute bottom-0 flex h-16 w-full items-center justify-between rounded-none border-t border-layout-border bg-white pr-[20px] dark:border-none dark:bg-dark-additional-bg/40">
       <Link
-        className="link-stand mx-10  "
+        className="link-stand mx-10"
         href="/"
         target="_blank"
         rel="noopener noreferrer"
