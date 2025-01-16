@@ -2,10 +2,10 @@
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-//import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, { ChangeEvent } from "react";
 
-import { useRouter, usePathname } from "@/navigation";
+//import { useRouter, usePathname } from "@/navigation";
 import { cn } from "@/lib/utils";
 
 export const LanguageSwitch = ({ locale }: { locale: string }) => {
@@ -13,10 +13,11 @@ export const LanguageSwitch = ({ locale }: { locale: string }) => {
   const router = useRouter();
 
   const handleLanguageChange = (newLocale: string) => {
-    //const path = pathname.split("/").slice(2).join("/");
-    //router.push(`/${newLocale}/${path}`);
     if (newLocale !== locale) {
-      router.push(pathname, { locale: newLocale });
+      const path = pathname.split("/").slice(2).join("/");
+      router.push(`/${newLocale}/${path}`);
+      //for import { useRouter, usePathname } from "@/navigation";
+      //router.push(pathname, { locale: newLocale });
     }
   };
   //console.log("locale from LanguageSwitch:", locale);
