@@ -1,15 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import {
-  BsFacebook,
-  BsInstagram,
-  BsTwitter,
-  BsGithub,
-  BsDribbble,
-} from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+import { useTranslations } from "next-intl";
 
-export const Footer = () => {
+export const Footer = ({ locale }: { locale: string }) => {
+  const t = useTranslations("Contacts");
   //absolute bottom-0  bg-secondary
   return (
     <div className="absolute bottom-0 flex h-16 w-full items-center justify-between rounded-none border-t border-layout-border bg-white pr-[20px] dark:border-none dark:bg-dark-additional-bg/40">
@@ -19,7 +15,7 @@ export const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        &copy; {new Date().getFullYear()} Oleksandr Liashchenko
+        &copy; {new Date().getFullYear()} {t("name")}
       </Link>
 
       <Link

@@ -1,13 +1,16 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
 export function Contacts({}: Props) {
+  const t = useTranslations("Contacts");
+
   return (
     <div className="mt-0 flex flex-row gap-6">
-      <div className="relative h-[200px] w-[200px]">
+      <div className="relative h-[220px] w-[220px]">
         <a href="/my-photo.jpg" download="my-photo.jpg">
           <Image
             fill
@@ -18,17 +21,15 @@ export function Contacts({}: Props) {
         </a>
       </div>
       <div className="flex w-full flex-col">
-        <h1 className="mb-2 text-xl font-semibold">Oleksandr Liashchenko</h1>
-        <h3 className="mb-2 text-base font-semibold">
-          Full Stack Web Developer
-        </h3>
-        <div className="mb-2 flex w-full flex-row text-sm">
-          <div>Kyiv, Ukraine; </div>
-          <div className="ml-4">Remote</div>
+        <h1 className="mb-2 text-xl font-semibold">{t("name")}</h1>
+        <h3 className="mb-2 text-base font-semibold">{t("title")}</h3>
+        <div className="mb-2 flex w-full flex-col text-sm">
+          <div>{t("location")}</div>
+          <div className="ml-0">{t("work-type")}</div>
         </div>
 
         <div className="flex w-full justify-between text-sm">
-          <div>Phone:</div>
+          <div>{t("phone")}</div>
           <Link
             target="_blank"
             rel="noopener noreferrer"

@@ -2,12 +2,15 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { sideList } from "@/lib/data";
+//import { sideList } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { sideList } from "@/lib/side-data";
 
-type Props = { pageType: "site" | "pdf" };
+type Props = { pageType: "site" | "pdf"; locale: string };
 
-export function SideList({ pageType }: Props) {
+export function SideList({ pageType, locale }: Props) {
+  // console.log("locale from SideList:", locale);
+
   return (
     <div
       className={cn(
@@ -24,7 +27,7 @@ export function SideList({ pageType }: Props) {
                   key={i}
                   className="mb-0 mt-0 list-none p-0 text-lg font-semibold"
                 >
-                  {item.text}
+                  {locale == "ua" && item.textUA ? item.textUA : item.text}
                 </li>
               );
             case "h3":
@@ -36,7 +39,7 @@ export function SideList({ pageType }: Props) {
                     pageType === "site" ? "mt-5 text-lg" : "mt-1 text-base",
                   )}
                 >
-                  {item.text}
+                  {locale == "ua" && item.textUA ? item.textUA : item.text}
                 </li>
               );
             default:
@@ -45,7 +48,7 @@ export function SideList({ pageType }: Props) {
                   key={i}
                   className="mt-0 list-image-[url(/li-for-light.svg)] p-0 text-left dark:list-image-[url(/li-for-dark.svg)]"
                 >
-                  {item.text}
+                  {locale == "ua" && item.textUA ? item.textUA : item.text}
                 </li>
               );
           }

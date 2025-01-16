@@ -4,9 +4,9 @@ import React from "react";
 import { mainList } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
-type Props = { pageType: "site" | "pdf" };
+type Props = { pageType: "site" | "pdf"; locale: string };
 
-export function MainList({ pageType }: Props) {
+export function MainList({ pageType, locale }: Props) {
   //console.log("pageType from MainList: ", pageType);
 
   return (
@@ -16,7 +16,7 @@ export function MainList({ pageType }: Props) {
         pageType === "site" ? "text-base" : "text-sm",
       )}
     >
-      {mainList.map(({ type, text, Comp }, i) => {
+      {mainList.map(({ type, text, textUA, Comp, CompUA }, i) => {
         switch (type) {
           case "h2":
             return (
@@ -27,7 +27,8 @@ export function MainList({ pageType }: Props) {
                   pageType === "site" ? "mt-5 text-xl" : "mt-1 text-lg",
                 )}
               >
-                {text}
+                {locale == "ua" && textUA ? textUA : text}
+                {/*   {text} */}
               </h2>
             );
           case "h3":
@@ -39,7 +40,8 @@ export function MainList({ pageType }: Props) {
                   pageType === "site" ? "mt-6 text-base" : "mt-1 text-base",
                 )}
               >
-                {text}
+                {locale == "ua" && textUA ? textUA : text}
+                {/*  {text} */}
               </h3>
             );
           case "header-node":
@@ -51,7 +53,8 @@ export function MainList({ pageType }: Props) {
                   pageType === "site" ? "mt-6 text-base" : "mt-1 text-base",
                 )}
               >
-                <Comp />{" "}
+                {locale == "ua" && CompUA ? <CompUA /> : <Comp />}
+                {/*  <Comp />{" "} */}
               </div>
             ) : null;
           case "p-node":
@@ -63,13 +66,15 @@ export function MainList({ pageType }: Props) {
                   pageType === "site" ? "!text-base" : "",
                 )}
               >
-                <Comp />
+                {locale == "ua" && CompUA ? <CompUA /> : <Comp />}
+                {/* <Comp /> */}
               </p>
             ) : null;
           default:
             return (
               <p key={i} className="mt-0 p-0">
-                {text}
+                {locale == "ua" && textUA ? textUA : text}
+                {/*  {text} */}
               </p>
             );
         }

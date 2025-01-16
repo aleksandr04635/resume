@@ -1,0 +1,19 @@
+{
+  "Header": {
+    "title": "Oleksandr Liashchenko - CV",
+    "description": "Oleksandr Liashchenko - Full-Stack Web Developer",
+    "pdf": "Download PDF",
+    "my-marketplace": "My Marketplace",
+    "my-blog": "My Blog"
+  },
+  "Contacts": {
+    "name": "Oleksandr Liashchenko",
+    "title": "Full-Stack Web Developer",
+    "location": "Location: Kyiv, Ukraine",
+    "work-type": "Work remotely only",
+    "phone": "Phone: "
+  },
+  "Skills": {
+    "skills": "Skills:"
+  }
+}

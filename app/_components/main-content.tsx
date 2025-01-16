@@ -5,9 +5,9 @@ import { Contacts } from "./contacts";
 import { MainList } from "./main-list";
 import { cn } from "@/lib/utils";
 
-type Props = { pageType: "site" | "pdf" };
+type Props = { pageType: "site" | "pdf"; locale: string };
 
-function MainContent({ pageType }: Props) {
+function MainContent({ pageType, locale }: Props) {
   return (
     <div
       className={cn(
@@ -17,11 +17,11 @@ function MainContent({ pageType }: Props) {
           : "mt-0 max-w-[1150px] flex-row",
       )}
     >
-      <SideList pageType={pageType} />
+      <SideList pageType={pageType} locale={locale} />
 
       <div className="flex flex-col pl-2">
         <Contacts />
-        <MainList pageType={pageType} />
+        <MainList pageType={pageType} locale={locale} />
       </div>
     </div>
   );
