@@ -5,7 +5,7 @@ import MainContent from "../../_components/main-content";
 
 type Props = { params: { locale: string } };
 
-async function page({ params }: Props) {
+async function page({ params }: any /*  Props */) {
   const { locale } = await params;
   return <MainContent pageType="site" locale={locale} />;
 }

@@ -9,7 +9,7 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: any; //{ locale: string };
 }) {
   const { locale } = await params;
   //h-fit justify-stretch from-sky-200 to-blue-600 gap-y-3 items-center

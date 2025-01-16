@@ -24,7 +24,7 @@ export default function ThemeSwitch() {
 
       setTheme(evt.matches ? "dark" : "light");
     });
-  }, []);
+  }, [setTheme]);
 
   if (!mounted) {
     //console.log("not mounted and return: ");

@@ -247,8 +247,8 @@ export const mainList = [
         full functionality for authentication via email and password with the
         full set of necessary emails sending, and a combination of JWT and
         refresh token, stored by Next-auth, users invitations and management for
-        the admins, changing users' data by admins and users, and retrieves from
-        the post services APIs the data about parcels, their batches, and
+        the admins, changing users&apos; data by admins and users, and retrieves
+        from the post services APIs the data about parcels, their batches, and
         manifests, shows them in tables and allows for editing of them to the
         necessary extent. It utilizes Next.js 14, Next-auth authentication
         system, Tailwind styling, and Shadcn/ui components.
