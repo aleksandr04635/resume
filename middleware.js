@@ -6,5 +6,11 @@ export default createMiddleware({
 });
 
 export const config = {
-  matcher: ["/", "/(ua|en)/:path*"],
+  matcher: [
+    "/",
+    "/(ua|en)/:path*",
+    // Enable redirects that add missing locales
+    // (e.g. `/pathnames` -> `/en/pathnames`)
+    "/((?!_next|_vercel|.*\\..*).*)",
+  ],
 };

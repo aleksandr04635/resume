@@ -15,5 +15,8 @@
   },
   "Skills": {
     "skills": "Навики:"
+  },
+  "NotFoundPage": {
+    "title": "Не знайдено"
   }
 }

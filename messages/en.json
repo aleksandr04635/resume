@@ -15,5 +15,8 @@
   },
   "Skills": {
     "skills": "Skills:"
+  },
+  "NotFoundPage": {
+    "title": "Not Found"
   }
 }
