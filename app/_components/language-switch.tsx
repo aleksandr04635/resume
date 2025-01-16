@@ -19,6 +19,7 @@ export const LanguageSwitch = ({ locale }: { locale: string }) => {
     if (newLocale !== locale) {
       console.log("path from LanguageSwitch:", path);
       router.push(`/${newLocale}/${path}`);
+      router.refresh();
       //for import { useRouter, usePathname } from "@/navigation";
       //router.push(pathname, { locale: newLocale });
     }
@@ -31,23 +32,23 @@ export const LanguageSwitch = ({ locale }: { locale: string }) => {
 
   return (
     <div className="flex flex-row items-center justify-between gap-1">
-      <Link href={`/${"en"}/${path}`}>
-        <div
-          /* onClick={() => handleLanguageChange("en")} */
-          className={cn(anyStyle, locale === "en" ? activeStyle : passiveStyle)}
-        >
-          EN
-        </div>
-      </Link>
+      {/* <Link href={`/${"en"}/${path}`}> */}
+      <div
+        onClick={() => handleLanguageChange("en")}
+        className={cn(anyStyle, locale === "en" ? activeStyle : passiveStyle)}
+      >
+        EN
+      </div>
+      {/*  </Link> */}
       <div className="h-[18px] border-l border-cyan-500 dark:border-blue-500"></div>
-      <Link href={`/${"ua"}/${path}`}>
-        <div
-          /*  onClick={() => handleLanguageChange("ua")} */
-          className={cn(anyStyle, locale === "ua" ? activeStyle : passiveStyle)}
-        >
-          UA
-        </div>{" "}
-      </Link>
+      {/*  <Link href={`/${"ua"}/${path}`}> */}
+      <div
+        onClick={() => handleLanguageChange("ua")}
+        className={cn(anyStyle, locale === "ua" ? activeStyle : passiveStyle)}
+      >
+        UA
+      </div>
+      {/*  </Link> */}
     </div>
   );
 };
