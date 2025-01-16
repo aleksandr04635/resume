@@ -1,7 +1,7 @@
 "use client";
 
 //import { useTranslations } from "next-intl";
-//import Link from "next/link";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { ChangeEvent } from "react";
 
@@ -11,12 +11,12 @@ import { cn } from "@/lib/utils";
 export const LanguageSwitch = ({ locale }: { locale: string }) => {
   const pathname = usePathname();
   const router = useRouter();
+  const path = pathname.split("/").slice(2).join("/");
 
   const handleLanguageChange = (newLocale: string) => {
     console.log("locale from LanguageSwitch:", locale);
     console.log("newLocale from LanguageSwitch:", newLocale);
     if (newLocale !== locale) {
-      const path = pathname.split("/").slice(2).join("/");
       console.log("path from LanguageSwitch:", path);
       router.push(`/${newLocale}/${path}`);
       //for import { useRouter, usePathname } from "@/navigation";
@@ -31,19 +31,23 @@ export const LanguageSwitch = ({ locale }: { locale: string }) => {
 
   return (
     <div className="flex flex-row items-center justify-between gap-1">
-      <div
-        onClick={() => handleLanguageChange("en")}
-        className={cn(anyStyle, locale === "en" ? activeStyle : passiveStyle)}
-      >
-        EN
-      </div>
+      <Link href={`/${"en"}/${path}`}>
+        <div
+          /* onClick={() => handleLanguageChange("en")} */
+          className={cn(anyStyle, locale === "en" ? activeStyle : passiveStyle)}
+        >
+          EN
+        </div>
+      </Link>
       <div className="h-[18px] border-l border-cyan-500 dark:border-blue-500"></div>
-      <div
-        onClick={() => handleLanguageChange("ua")}
-        className={cn(anyStyle, locale === "ua" ? activeStyle : passiveStyle)}
-      >
-        UA
-      </div>
+      <Link href={`/${"ua"}/${path}`}>
+        <div
+          /*  onClick={() => handleLanguageChange("ua")} */
+          className={cn(anyStyle, locale === "ua" ? activeStyle : passiveStyle)}
+        >
+          UA
+        </div>{" "}
+      </Link>
     </div>
   );
 };
