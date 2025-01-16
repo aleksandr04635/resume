@@ -1,7 +1,7 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import Link from "next/link";
+//import { useTranslations } from "next-intl";
+//import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { ChangeEvent } from "react";
 
@@ -13,8 +13,11 @@ export const LanguageSwitch = ({ locale }: { locale: string }) => {
   const router = useRouter();
 
   const handleLanguageChange = (newLocale: string) => {
+    console.log("locale from LanguageSwitch:", locale);
+    console.log("newLocale from LanguageSwitch:", newLocale);
     if (newLocale !== locale) {
       const path = pathname.split("/").slice(2).join("/");
+      console.log("path from LanguageSwitch:", path);
       router.push(`/${newLocale}/${path}`);
       //for import { useRouter, usePathname } from "@/navigation";
       //router.push(pathname, { locale: newLocale });
