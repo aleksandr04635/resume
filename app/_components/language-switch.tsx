@@ -14,10 +14,10 @@ export const LanguageSwitch = ({ locale }: { locale: string }) => {
   const path = pathname.split("/").slice(2).join("/");
 
   const handleLanguageChange = (newLocale: string) => {
-    console.log("locale from LanguageSwitch:", locale);
-    console.log("newLocale from LanguageSwitch:", newLocale);
+    //console.log("locale from LanguageSwitch:", locale);
+    //console.log("newLocale from LanguageSwitch:", newLocale);
     if (newLocale !== locale) {
-      console.log("path from LanguageSwitch:", path);
+      //console.log("path from LanguageSwitch:", path);
       router.push(`/${newLocale}/${path}`);
       router.refresh();
       //for import { useRouter, usePathname } from "@/navigation";

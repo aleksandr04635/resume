@@ -9,16 +9,18 @@ export function Contacts({}: Props) {
   const t = useTranslations("Contacts");
 
   return (
-    <div className="mt-0 flex flex-row gap-6">
-      <div className="relative h-[220px] w-[220px]">
-        <a href="/my-photo.jpg" download="my-photo.jpg">
-          <Image
-            fill
-            className="object-cover"
-            alt="Image"
-            src={"/my-photo.jpg"}
-          />
-        </a>
+    <div className="mt-0 flex flex-col gap-6 sm:flex-row">
+      <div className="flex flex-row justify-center">
+        <div className="relative flex h-[220px] w-[220px] flex-row justify-center">
+          <a href="/my-photo.jpg" download="my-photo.jpg">
+            <Image
+              fill
+              className="object-cover"
+              alt="Image"
+              src={"/my-photo.jpg"}
+            />
+          </a>
+        </div>{" "}
       </div>
       <div className="flex w-full flex-col">
         <h1 className="mb-2 text-xl font-semibold">{t("name")}</h1>

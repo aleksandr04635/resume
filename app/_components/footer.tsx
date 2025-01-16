@@ -10,7 +10,7 @@ export const Footer = ({ locale }: { locale: string }) => {
   return (
     <div className="absolute bottom-0 flex h-16 w-full items-center justify-between rounded-none border-t border-layout-border bg-white pr-[20px] dark:border-none dark:bg-dark-additional-bg/40">
       <Link
-        className="link-stand mx-10"
+        className="link-stand ml-10"
         href="/"
         target="_blank"
         rel="noopener noreferrer"
@@ -19,7 +19,7 @@ export const Footer = ({ locale }: { locale: string }) => {
       </Link>
 
       <Link
-        className="link-stand mx-10"
+        className="link-stand mr-10"
         target="_blank"
         rel="noopener noreferrer"
         href={"https://github.com/aleksandr04635"}
