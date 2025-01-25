@@ -17,8 +17,9 @@ export const Header = ({ locale }: { locale: string }) => {
 
   const downloadLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
 
+  //dark:border-none
   return (
-    <nav className="h-fit w-full border-b border-layout-border bg-white py-1 pl-1 shadow-sm dark:border-none dark:bg-dark-additional-bg/40 sm:py-3 sm:pl-4 sm:pr-[35px]">
+    <nav className="h-fit w-full border-b border-layout-border bg-white py-1 pl-1 shadow-sm dark:bg-dark-additional-bg/40 sm:py-3 sm:pl-4 sm:pr-[35px]">
       {/* <div className="flex w-full flex-col"> */}
       <div className="flex w-full flex-col items-center justify-between gap-1 sm:flex-row sm:gap-16">
         <div className="flex w-full flex-col flex-wrap items-center justify-between gap-1 sm:w-3/4 sm:flex-row">

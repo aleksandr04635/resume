@@ -339,7 +339,9 @@ export const mainList = [
         </Link>{" "}
         and Express backend of the application with the Mongo database and fixed
         a lot of bugs in them. The majority of the content and many UI features
-        you see there were created by me.
+        you see there were created by me. I created a new set of services and
+        their prices in Stripe and integrated them into frontend and admin
+        applications.
       </>
     ),
     CompUA: () => (
@@ -382,7 +384,8 @@ export const mainList = [
         </Link>{" "}
         та Express бекенд застосунку з базою даних Mongo та виправив багато
         помилок в них. Більшість контенту та багато функцій інтерфейсу, які ви
-        бачите там, були створені мною.
+        бачите там, були створені мною. Я створив новий набір послуг і їхні ціни
+        в Stripe та інтегрував їх в сайт і застосунок адміністратора.
       </>
     ),
   },
@@ -699,7 +702,7 @@ export const mainList = [
   {
     text: "Working on Next.js 14 with PostgreSQL/Prisma ORM, it enables user authentication with the role of a Brand or an Affiliate, with the combination of email and password using Auth.js, with email verification and password resetting via email sending, inputs user data in forms made with react-hook-form with user input masking and Zod input validation, and outputs them in the form of tables on wide screens, which are shown as horizontally swipeable by gestures lists on mobile devices for creation of advertisement Offers by the users with the status of Brand, and Media Channels, by the users with the status of Affiliate, which they own and offer the placement of the advertisements there, and with the ability of Affiliates to accept advertisement Offers from Brands. Users with the status of Manager in the current version manage all the financial operations manually, and verify the status of Offers and Media Channels, being able to edit them as well as all the financial properties of the users.",
     textUA:
-      "Працюючи на Next.js 14 з PostgreSQL/Prisma ORM, вона дає змогу автентифікувати користувача в ролі Бренду або Афіліата, з комбінацією адреси електронної пошти та пароля за допомогою Auth.js, з підтвердженням електронної пошти та скиданням пароля через надсилання емейла, приймає дані користувача у формах, створених за допомогою react-hook-form з маскуванням вводу та перевіркою введення через Zod, і виводить дані у вигляді таблиць на широких екранах, які відображаються горизонтально свайпаними списками  на мобільних пристроях для створення рекламних Оферів користувачами зі статусом Бренд і Медіа-каналів користувачами зі статусом Афіліат, якими вони володіють і пропонують розміщення там реклами , а також з можливістю Афілітів приймати рекламні офери від Брендів. Користувачі зі статусом Менеджера в поточній версії керують усіма фінансовими операціями вручну, а також перевіряють статус пропозицій і медіа-каналів, маючи можливість редагувати їх, а також усі фінансові властивості користувачів.",
+      "Працюючи на Next.js 14 з PostgreSQL/Prisma ORM, вона дає змогу автентифікувати користувача в ролі Бренду або Афіліата, з комбінацією адреси електронної пошти та пароля за допомогою Auth.js, з підтвердженням електронної пошти та скиданням пароля через надсилання емейла, приймає дані користувача у формах, створених за допомогою react-hook-form з маскуванням вводу та перевіркою введення через Zod, і виводить дані у вигляді таблиць на широких екранах, які відображаються горизонтально свайпаними списками  на мобільних пристроях для створення рекламних Оферів користувачами зі статусом Бренд і Медіа-каналів користувачами зі статусом Афіліат, якими вони володіють і пропонують розміщення там реклами , а також з можливістю Афіліатів приймати рекламні офери від Брендів. Користувачі зі статусом Менеджера в поточній версії керують усіма фінансовими операціями вручну, а також перевіряють статус пропозицій і медіа-каналів, маючи можливість редагувати їх, а також усі фінансові властивості користувачів.",
   },
   {
     text: "I quit the job when it became clear that they weren't going to pay me.",
