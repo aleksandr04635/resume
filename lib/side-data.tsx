@@ -68,9 +68,10 @@ export const sideList = [
   { text: "Postman, Insomnia, Thunder Client" },
   { text: "Gulp" },
   { text: "Figma" },
+
   { text: "JS parsing, Puppeteer" },
   { text: "Stripe" },
-  { text: "Jira" },
+
   { text: "Git: Github, Gitlab" },
   { text: "Docker" },
   { type: "h3", text: "Data analysis:", textUA: "Аналіз Данних" },
@@ -93,10 +94,13 @@ export const sideList = [
   { text: "GTD" },
   { text: "Teamwork" },
   { text: "Cryptocurrencies", textUA: "Криптовалюти" },
-  {
-    text: "Communications: Telegram, Discord, Google Meet",
-    textUA: "Комунікації: Telegram, Discord, Google Meet",
-  },
+  { type: "h3", text: "Communications:", textUA: "Комунікації:" },
+  { text: "Jira" },
+  { text: "Discord" },
+  { text: "Google Meet" },
+  { text: "Miro" },
+  { text: "Telegram" },
+
   { type: "h3", text: "Languages:", textUA: "Мови" },
   {
     text: "Ukrainian, Russian: native",
