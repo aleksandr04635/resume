@@ -297,6 +297,77 @@ export const mainList = [
       </>
     ),
   },
+
+  {
+    type: "p-node",
+    Comp: () => (
+      <>
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-stand pl-1 !text-base !font-semibold"
+          href={`https://staging.stjohnsbuilding.co.uk/`}
+        >
+          {"St. John’s: "}
+        </Link>
+        Working together with another developer on a project, consisting of a
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-stand pl-1"
+          href={`https://staging.stjohnsbuilding.co.uk/`}
+        >
+          notion board
+        </Link>
+        , with the access via admin-granted credentials, utilizing a Redux
+        store, an
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-stand pl-1"
+          href={`https://admin.stjohnsbuilding.co.uk/`}
+        >
+          admin panel
+        </Link>{" "}
+        to it, and Express backend of the application with a Mongo database I
+        made a lot of functionality of it.
+      </>
+    ),
+    CompUA: () => (
+      <>
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-stand pl-1 !text-base !font-semibold"
+          href={`https://staging.stjohnsbuilding.co.uk/`}
+        >
+          {"St. John’s: "}
+        </Link>
+        Працюючи з іншим розробником над проектом, що складаеться з
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-stand pl-1"
+          href={`https://staging.stjohnsbuilding.co.uk/`}
+        >
+          дошки оголошень
+        </Link>
+        , з доступом через надані адміном логін і пароль, що використовує Redux
+        store,
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-stand pl-1"
+          href={`https://admin.stjohnsbuilding.co.uk/`}
+        >
+          адмін панелі
+        </Link>{" "}
+        для неї, і Express бекенду з Mongo базою данних, я розробив значну
+        частину функціоналу в них.
+      </>
+    ),
+  },
+
   {
     type: "p-node",
     Comp: () => (
@@ -389,6 +460,7 @@ export const mainList = [
       </>
     ),
   },
+
   {
     type: "p-node",
     Comp: () => (
