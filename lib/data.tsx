@@ -412,7 +412,11 @@ export const mainList = [
         a lot of bugs in them. The majority of the content and many UI features
         you see there were created by me. I created a new set of services and
         their prices in Stripe and integrated them into frontend and admin
-        applications.
+        applications. For WordPress, which is used as a source of information,
+        inputted by the Client, I created a few types of custom posts, custom
+        WordPress components, to be used in them, and custom API endpoints to
+        extract the data from these posts and their sets, for the information
+        from them to be independently rendered on the frontend.
       </>
     ),
     CompUA: () => (
@@ -456,7 +460,12 @@ export const mainList = [
         та Express бекенд застосунку з базою даних Mongo та виправив багато
         помилок в них. Більшість контенту та багато функцій інтерфейсу, які ви
         бачите там, були створені мною. Я створив новий набір послуг і їхні ціни
-        в Stripe та інтегрував їх в сайт і застосунок адміністратора.
+        в Stripe та інтегрував їх в сайт і застосунок адміністратора. Для
+        ВордПрессу, що використовується як джерело інформації, що вводиться
+        Замовником, я створив кілька кастомних типів постів, кастомні компоненти
+        ВордПрессу, що використовуються в них, і кастомні АПІ ендпоінти для
+        взяття інформації з цих постів і їх наборів для її незалежного
+        відображення на фронтенді.
       </>
     ),
   },
@@ -584,9 +593,9 @@ export const mainList = [
       "У двох останніх проектах використовується Next.js 12, стилі SCSS і MobX стори.",
   },
   {
-    text: "I'm searching for a new job because all my projects here are finished, the company cannot find new customers and I have no tasks.",
+    text: "I'm looking for a new job because my task load and respective earnings have become too low.",
     textUA:
-      "Я шукаю нову роботу, тому що всі мої проекти тут закінчені, компанія не може знайти нових клієнтів і у мене немає завдань.",
+      "Я шукаю нову роботу, тому що мое навантаження завданнями і відповідний заробіток стали замалими.",
   },
 
   {

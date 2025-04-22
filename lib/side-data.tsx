@@ -18,6 +18,11 @@ export const sideList = [
   { text: "React Query" },
   { text: "MobX" },
   { text: "Redis" },
+  {
+    text: "WordPress: custom posts, custom components, custom API endpoints",
+    textUA: "WordPress: кастомні пости, компонентиб АПІ",
+  },
+  { text: "PHP for WordPress" },
   { text: "react-admin" },
   {
     text: "Firebase: Authentication, Storage, Firestore Database, Cloud Messaging",
