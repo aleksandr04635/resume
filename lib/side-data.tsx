@@ -20,7 +20,7 @@ export const sideList = [
   { text: "Redis" },
   {
     text: "WordPress: custom posts, custom components, custom API endpoints",
-    textUA: "WordPress: кастомні пости, компонентиб АПІ",
+    textUA: "WordPress: кастомні пости, компоненти, АПІ",
   },
   { text: "PHP for WordPress" },
   { text: "react-admin" },

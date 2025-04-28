@@ -251,7 +251,8 @@ export const mainList = [
         from the post services APIs the data about parcels, their batches, and
         manifests, shows them in tables and allows for editing of them to the
         necessary extent. It utilizes Next.js 14, Next-auth authentication
-        system, Tailwind styling, and Shadcn/ui components.
+        system, Tailwind styling, and Shadcn/ui components. The project had been
+        discontinued by the Customer.
       </>
     ),
     CompUA: () => (
@@ -293,7 +294,7 @@ export const mainList = [
         посилки, їх партії та маніфести, показує їх у таблицях і дозволяє
         редагувати їх у необхідній мірі. Він використовує автентифікацію Next.js
         14, Next-auth систему авторизації, стилі через Tailwind і компоненти
-        Shadcn/ui.
+        Shadcn/ui. Проект був призупинений Замовником.
       </>
     ),
   },
@@ -306,7 +307,8 @@ export const mainList = [
           target="_blank"
           rel="noopener noreferrer"
           className="link-stand pl-1 !text-base !font-semibold"
-          href={`https://staging.stjohnsbuilding.co.uk/`}
+          /* href={`https://staging.stjohnsbuilding.co.uk/`} */
+          href={`https://stjohnsbuilding.co.uk `}
         >
           {"St. John’s: "}
         </Link>
@@ -315,7 +317,7 @@ export const mainList = [
           target="_blank"
           rel="noopener noreferrer"
           className="link-stand pl-1"
-          href={`https://staging.stjohnsbuilding.co.uk/`}
+          href={`https://stjohnsbuilding.co.uk `}
         >
           notion board
         </Link>
@@ -325,7 +327,7 @@ export const mainList = [
           target="_blank"
           rel="noopener noreferrer"
           className="link-stand pl-1"
-          href={`https://admin.stjohnsbuilding.co.uk/`}
+          href={`https://admin.stjohnsbuilding.co.uk`}
         >
           admin panel
         </Link>{" "}
@@ -339,7 +341,7 @@ export const mainList = [
           target="_blank"
           rel="noopener noreferrer"
           className="link-stand pl-1 !text-base !font-semibold"
-          href={`https://staging.stjohnsbuilding.co.uk/`}
+          href={`https://stjohnsbuilding.co.uk `}
         >
           {"St. John’s: "}
         </Link>
@@ -348,7 +350,7 @@ export const mainList = [
           target="_blank"
           rel="noopener noreferrer"
           className="link-stand pl-1"
-          href={`https://staging.stjohnsbuilding.co.uk/`}
+          href={`https://stjohnsbuilding.co.uk `}
         >
           дошки оголошень
         </Link>
@@ -358,7 +360,7 @@ export const mainList = [
           target="_blank"
           rel="noopener noreferrer"
           className="link-stand pl-1"
-          href={`https://admin.stjohnsbuilding.co.uk/`}
+          href={`https://admin.stjohnsbuilding.co.uk `}
         >
           адмін панелі
         </Link>{" "}
