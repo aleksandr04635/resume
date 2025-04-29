@@ -4,9 +4,9 @@ import Link from "next/link";
 export const mainList = [
   { type: "h2", text: "Summary", textUA: "Резюме" },
   {
-    text: "I'm a Full-Stack Web Developer with teamwork experience, proficient in the full stack of skills, necessary for web apps creation, from various UI tools to databases, with testing skills, and with English on the level C1-C2.",
+    text: "I'm an expirienced Full-Stack Web Developer with a year of teamwork experience, proficient in the full stack of skills, necessary for web apps creation, from various UI tools to databases, with focus on Next.js, with testing skills, and with English on the level C1-C2.",
     textUA:
-      "Я Фул-стек Веб-Розробник з досвідом роботи в команді, володію повним набором навичок, необхідних для створення веб-додатків, від різних інструментів інтерфейсу користувача до баз даних, маю навички тестування та володію англійською на рівні C1-C2.",
+      "Я досвідчений Фул-стек Веб-Розробник з досвідом року роботи в команді, володію повним набором навичок, необхідних для створення веб-додатків, від різних інструментів інтерфейсу користувача до баз даних, з фокусом на Next.js, маю навички тестування та володію англійською на рівні C1-C2.",
   },
   { type: "h2", text: "My Projects", textUA: "Мої проекти" },
   {
