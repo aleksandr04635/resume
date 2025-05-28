@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import {
   formatDate,
   formatDuration,
@@ -25,8 +27,10 @@ export default function TimerPage() {
   //const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   // console.log("baseUrl:", baseUrl);
 
+  //${window.location.origin}
+
   const fetchIntervals = async () => {
-    const res = await fetch(`${window.location.origin}/api/timer/all`);
+    const res = await fetch(`/api/timer/all`);
     const data = await res.json();
     setIntervals(data);
   };
@@ -34,7 +38,7 @@ export default function TimerPage() {
   const startTimer = async () => {
     setStatus("starting");
     try {
-      const res = await fetch(`${window.location.origin}/api/timer/start`, {
+      const res = await fetch(`/api/timer/start`, {
         method: "POST",
       });
 
@@ -54,7 +58,7 @@ export default function TimerPage() {
     if (!intervalId) return;
     setStatus("stopping");
     try {
-      const res = await fetch(`${window.location.origin}/api/timer/stop`, {
+      const res = await fetch(`/api/timer/stop`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
