@@ -25,6 +25,12 @@ export async function generateMetadata({ params }: any) {
   return {
     title,
     description,
+    icons: {
+      //icon: "/favicon.ico",
+      icon: "/android-chrome-512x512.png",
+      shortcut: "/favicon-32x32.png",
+      apple: "/apple-touch-icon.png",
+    },
   };
 }
 
