@@ -2,6 +2,7 @@
 
 export const dynamic = "force-dynamic";
 
+import MyButton from "@/components/ui/my-button";
 import {
   formatDate,
   formatDuration,
@@ -136,24 +137,38 @@ export default function TimerPage() {
 
   return (
     <div className="mx-auto max-w-2xl space-y-6 p-6">
-      <h1 className="text-center text-2xl font-bold">⏱️ Timer</h1>
+      <h1 className="text-center text-2xl font-bold">{/* ⏱️ */} Timer</h1>
 
       <div className="flex items-center justify-center space-x-4">
-        <button
+        {/*  <button
           onClick={startTimer}
           disabled={status === "starting" || status === "started"}
           className="rounded-xl bg-green-600 px-4 py-2 text-white hover:bg-green-700 disabled:opacity-50"
         >
           {status === "starting" ? "Starting..." : "Start"}
-        </button>
+        </button> */}
 
-        <button
+        <MyButton
+          onClick={startTimer}
+          disabled={status === "starting" || status === "started"}
+        >
+          {status === "starting" ? "Starting..." : "Start"}
+        </MyButton>
+
+        {/*  <button
           onClick={stopTimer}
           disabled={status !== "started"}
           className="rounded-xl bg-red-600 px-4 py-2 text-white hover:bg-red-700 disabled:opacity-50"
         >
           {status === "stopping" ? "Stopping..." : "Stop"}
-        </button>
+        </button> */}
+        <MyButton
+          onClick={stopTimer}
+          style="danger"
+          disabled={status !== "started"}
+        >
+          {status === "stopping" ? "Stopping..." : "Stop"}
+        </MyButton>
       </div>
 
       {status === "error" && (
