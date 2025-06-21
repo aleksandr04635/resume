@@ -82,7 +82,7 @@ export default function TimerPage() {
   useEffect(() => {
     const fetchOnLoad = async () => {
       const intervals = await fetchIntervals();
-      //console.log("intervals in useEffect run: ", intervals);
+      console.log("intervals in useEffect run: ", intervals);
       //console.log("status in useEffect run: ", status);
 
       if (status == "idle") {
@@ -91,8 +91,37 @@ export default function TimerPage() {
         let i = 0;
         while (!foundStarted && i < intervals.length) {
           if (!intervals[i].end) {
-            foundStarted = true;
-            indexStarted = intervals[i].id;
+            const now = new Date();
+            const start = new Date(intervals[i].start);
+            console.log("start in useEffect run: ", start);
+            const diffInHours =
+              (now.getTime() - start.getTime()) / (1000 * 60 * 60);
+            console.log("diffInHours in useEffect run: ", diffInHours);
+            if (diffInHours < 5) {
+              //0.003
+              //resume a timer for a given interval
+              foundStarted = true;
+              indexStarted = intervals[i].id;
+            } else {
+              //delete a given interval
+              console.log("deleting in useEffect run: ", intervals[i].id);
+              try {
+                const res = await fetch(`/api/timer/delete`, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({ id: Number(intervals[i].id) }),
+                });
+
+                // if (!res.ok) throw new Error("Failed to delete timer");
+              } catch (err) {
+                console.error("Failed to delete timer", err);
+                // setStatus("error");
+              }
+              fetchIntervals();
+            }
+            // if (intervals[i].start) {            }
           }
           i++;
         }
