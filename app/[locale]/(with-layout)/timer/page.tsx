@@ -21,7 +21,8 @@ export default function TimerPage() {
   >("idle");
   const [intervalId, setIntervalId] = useState<number | null>(null);
   const [intervals, setIntervals] = useState<Interval[]>([]);
-  // console.log("intervals:", intervals);
+  //console.log("intervals:", intervals);
+  //console.log("intervalId:", intervalId);
   //const origin = window.location.origin;
   //console.log("Origin:", origin);
   //const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
@@ -33,6 +34,7 @@ export default function TimerPage() {
     const res = await fetch(`/api/timer/all`);
     const data = await res.json();
     setIntervals(data);
+    return data;
   };
 
   const startTimer = async () => {
@@ -78,7 +80,29 @@ export default function TimerPage() {
   };
 
   useEffect(() => {
-    fetchIntervals();
+    const fetchOnLoad = async () => {
+      const intervals = await fetchIntervals();
+      //console.log("intervals in useEffect run: ", intervals);
+      //console.log("status in useEffect run: ", status);
+
+      if (status == "idle") {
+        let foundStarted = false;
+        let indexStarted = 0;
+        let i = 0;
+        while (!foundStarted && i < intervals.length) {
+          if (!intervals[i].end) {
+            foundStarted = true;
+            indexStarted = intervals[i].id;
+          }
+          i++;
+        }
+        if (foundStarted) {
+          setIntervalId(indexStarted);
+          setStatus("started");
+        }
+      }
+    };
+    fetchOnLoad();
   }, []);
 
   return (
