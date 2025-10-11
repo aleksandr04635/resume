@@ -45,7 +45,10 @@ export function SideList({ pageType, locale }: Props) {
                       ? "Використовував мінімум в одному проєкті"
                       : "Used in at least one project"}
                   </li>
-                  <li key={i} className="mt-0 list-none p-0 pt-1 text-left">
+                  <li
+                    key={i + "intro2"}
+                    className="mt-0 list-none p-0 pt-1 text-left"
+                  >
                     {TSymbol()} {"- "}
                     {locale == "ua"
                       ? "Освоїв по тьюторіалу"
