@@ -21,6 +21,19 @@ module.exports = {
         "additional-text": "#374151",
         "dark-additional-text": "#E5E7EB",
         "main-border-light": "#0ac6db",
+
+        gold: {
+          light: "#FFD700", // bright gold
+          DEFAULT: "#DAA520", // goldenrod (balanced gold)
+          dark: "#B8860B", // deep antique gold
+        },
+        silver: {
+          //then used like className="text-silver-light"
+          light: "#C0C0C0", // classic silver
+          DEFAULT: "#BFC1C2", // soft metallic silver
+          dark: "#A9A9A9", // darker polished silver
+        },
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

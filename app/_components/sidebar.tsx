@@ -8,6 +8,21 @@ import { sideList } from "@/lib/side-data";
 
 type Props = { pageType: "site" | "pdf"; locale: string };
 
+function PSymbol() {
+  return (
+    <span className="bg-gradient-to-bl from-yellow-200 via-yellow-500 to-yellow-800 bg-clip-text text-transparent">
+      {"p"}
+    </span>
+  );
+}
+function TSymbol() {
+  return (
+    <span className="bg-gradient-to-bl from-gray-200 via-gray-500 to-gray-800 bg-clip-text text-transparent">
+      {"t"}
+    </span>
+  );
+}
+
 export function SideList({ pageType, locale }: Props) {
   // console.log("locale from SideList:", locale);
 
@@ -21,6 +36,23 @@ export function SideList({ pageType, locale }: Props) {
       <ul className={cn("", pageType === "site" ? "text-base" : "text-sm")}>
         {sideList.map((item, i) => {
           switch (item.type) {
+            case "intro":
+              return (
+                <>
+                  <li key={i} className="mt-0 list-none p-0 pt-1 text-left">
+                    {PSymbol()} {"- "}
+                    {locale == "ua"
+                      ? "Використовував мінімум в одному проєкті"
+                      : "Used in at least one project"}
+                  </li>
+                  <li key={i} className="mt-0 list-none p-0 pt-1 text-left">
+                    {TSymbol()} {"- "}
+                    {locale == "ua"
+                      ? "Освоїв по тьюторіалу"
+                      : "Went through tutorials"}
+                  </li>
+                </>
+              );
             case "h2":
               return (
                 <li
@@ -44,11 +76,28 @@ export function SideList({ pageType, locale }: Props) {
               );
             default:
               return (
-                <li
+                /* <li
                   key={i}
                   className="mt-0 list-image-[url(/li-for-light.svg)] p-0 text-left dark:list-image-[url(/li-for-dark.svg)]"
                 >
-                  {locale == "ua" && item.textUA ? item.textUA : item.text}
+                   {locale == "ua" && item.textUA ? item.textUA : item.text} 
+                  
+                </li> */
+                <li
+                  key={i}
+                  className="mt-0 list-image-[url(/li-for-light.svg)] px-0 pt-1 text-left dark:list-image-[url(/li-for-dark.svg)]"
+                >
+                  <div className="flex flex-row justify-between gap-2">
+                    <div>
+                      {locale == "ua" && item.textUA ? item.textUA : item.text}
+                    </div>
+
+                    {item.knowledgeType == "p"
+                      ? PSymbol()
+                      : item.knowledgeType == "t"
+                        ? TSymbol()
+                        : null}
+                  </div>
                 </li>
               );
           }

@@ -87,6 +87,7 @@ export default function TimerPage() {
       //console.log("status in useEffect run: ", status);
 
       if (status == "idle") {
+        //check if in DB are intervals without end time
         let foundStarted = false;
         let indexStarted = 0;
         let i = 0;
