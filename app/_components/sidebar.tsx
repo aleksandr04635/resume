@@ -30,7 +30,7 @@ export function SideList({ pageType, locale }: Props) {
     <div
       className={cn(
         "pl-5 pr-3",
-        pageType === "site" ? "min-w-[290px]" : "min-w-[220px]",
+        pageType === "site" ? "min-w-[290px]" : "min-w-[240px]",
       )}
     >
       <ul className={cn("", pageType === "site" ? "text-base" : "text-sm")}>

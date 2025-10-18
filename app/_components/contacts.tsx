@@ -62,10 +62,10 @@ export function Contacts({}: Props) {
             target="_blank"
             rel="noopener noreferrer"
             className=""
-            href={`https://t.me/OleksandrLiashcheko`}
+            href={`https://t.me/OleksandrLiashchenko`}
           >
             <h3 className="link-stand text-center text-sm">
-              <div>@OleksandrLiashcheko </div>
+              <div>@OleksandrLiashchenko </div>
             </h3>
           </Link>
         </div>
