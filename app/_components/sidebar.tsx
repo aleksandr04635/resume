@@ -24,11 +24,11 @@ function TSymbol({ pageType }: PropsC) {
   if (pageType == "site") {
     return (
       <span className="bg-gradient-to-bl from-gray-200 via-gray-500 to-gray-800 bg-clip-text text-transparent">
-        {"p"}
+        {"t"}
       </span>
     );
   } else {
-    return <span className="text-gray-400">{"p"}</span>;
+    return <span className="text-gray-400">{"t"}</span>;
   }
 }
 
