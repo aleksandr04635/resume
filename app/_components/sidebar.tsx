@@ -7,22 +7,29 @@ import { cn } from "@/lib/utils";
 import { sideList } from "@/lib/side-data";
 
 type Props = { pageType: "site" | "pdf"; locale: string };
+type PropsC = { pageType: "site" | "pdf" };
 
-function PSymbol() {
-  return (
-    /*  <span className="bg-gradient-to-bl from-yellow-200 via-yellow-500 to-yellow-800 bg-clip-text text-transparent">
-      {"p"}
-    </span> */
-    <span className="text-yellow-500">{"p"}</span>
-  );
+function PSymbol({ pageType }: PropsC) {
+  if (pageType == "site") {
+    return (
+      <span className="bg-gradient-to-bl from-yellow-200 via-yellow-500 to-yellow-800 bg-clip-text text-transparent">
+        {"p"}
+      </span>
+    );
+  } else {
+    return <span className="text-yellow-500">{"p"}</span>;
+  }
 }
-function TSymbol() {
-  return (
-    /*  <span className="bg-gradient-to-bl from-gray-200 via-gray-500 to-gray-800 bg-clip-text text-transparent">
-      {"t"}
-    </span> */
-    <span className="text-gray-400">{"t"}</span>
-  );
+function TSymbol({ pageType }: PropsC) {
+  if (pageType == "site") {
+    return (
+      <span className="bg-gradient-to-bl from-gray-200 via-gray-500 to-gray-800 bg-clip-text text-transparent">
+        {"p"}
+      </span>
+    );
+  } else {
+    return <span className="text-gray-400">{"p"}</span>;
+  }
 }
 
 export function SideList({ pageType, locale }: Props) {
@@ -42,7 +49,7 @@ export function SideList({ pageType, locale }: Props) {
               return (
                 <>
                   <li key={i} className="mt-0 list-none p-0 pt-1 text-left">
-                    {PSymbol()} {"- "}
+                    <PSymbol pageType={pageType} /> {"- "}
                     {locale == "ua"
                       ? "Використовував мінімум в одному проєкті"
                       : "Used in at least one project"}
@@ -51,7 +58,7 @@ export function SideList({ pageType, locale }: Props) {
                     key={i + "intro2"}
                     className="mt-0 list-none p-0 pt-1 text-left"
                   >
-                    {TSymbol()} {"- "}
+                    <TSymbol pageType={pageType} /> {"- "}
                     {locale == "ua"
                       ? "Освоїв по тьюторіалу"
                       : "Went through tutorials"}
@@ -97,11 +104,11 @@ export function SideList({ pageType, locale }: Props) {
                       {locale == "ua" && item.textUA ? item.textUA : item.text}
                     </div>
 
-                    {item.knowledgeType == "p"
-                      ? PSymbol()
-                      : item.knowledgeType == "t"
-                        ? TSymbol()
-                        : null}
+                    {item.knowledgeType == "p" ? (
+                      <PSymbol pageType={pageType} />
+                    ) : item.knowledgeType == "t" ? (
+                      <TSymbol pageType={pageType} />
+                    ) : null}
                   </div>
                 </li>
               );
