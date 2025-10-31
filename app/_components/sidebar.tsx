@@ -10,16 +10,18 @@ type Props = { pageType: "site" | "pdf"; locale: string };
 
 function PSymbol() {
   return (
-    <span className="bg-gradient-to-bl from-yellow-200 via-yellow-500 to-yellow-800 bg-clip-text text-transparent">
+    /*  <span className="bg-gradient-to-bl from-yellow-200 via-yellow-500 to-yellow-800 bg-clip-text text-transparent">
       {"p"}
-    </span>
+    </span> */
+    <span className="text-yellow-500">{"p"}</span>
   );
 }
 function TSymbol() {
   return (
-    <span className="bg-gradient-to-bl from-gray-200 via-gray-500 to-gray-800 bg-clip-text text-transparent">
+    /*  <span className="bg-gradient-to-bl from-gray-200 via-gray-500 to-gray-800 bg-clip-text text-transparent">
       {"t"}
-    </span>
+    </span> */
+    <span className="text-gray-400">{"t"}</span>
   );
 }
 

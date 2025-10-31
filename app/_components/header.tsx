@@ -8,12 +8,19 @@ import { LanguageSwitch } from "./language-switch";
 
 export const Header = ({ locale }: { locale: string }) => {
   const t = useTranslations("Header");
-  // const { locale } = await params;
+  //const { locale } = await params;
   //rounded-xl bg-secondary  h-16
 
   //https://drive.google.com/file/d/1P0Pl251KuAyKPUFfvLjcNccoMt1Cb5Rd/view?usp=sharing
   //add here lang via locale
-  const fileId = "1P0Pl251KuAyKPUFfvLjcNccoMt1Cb5Rd"; // Replace with your actual file ID
+  //const fileId = "1P0Pl251KuAyKPUFfvLjcNccoMt1Cb5Rd"; // Replace with your actual file ID
+  //https://drive.google.com/file/d/1v_ktmw6ZJZUdb_vmEracpNTzZkQ3Il4u/view?usp=sharing
+  //https://drive.google.com/file/d/1SY_ZeV_ZNMejCiZapD9tXkyNNAVDrqeo/view?usp=sharing
+  //console.log("locale in Header:", locale);
+  const fileId =
+    locale == "ua"
+      ? "1v_ktmw6ZJZUdb_vmEracpNTzZkQ3Il4u"
+      : "1SY_ZeV_ZNMejCiZapD9tXkyNNAVDrqeo";
 
   const downloadLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
 

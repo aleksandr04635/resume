@@ -14,7 +14,7 @@ function MainContent({ pageType, locale }: Props) {
         "mx-auto flex gap-5 px-1 py-4 text-justify",
         pageType === "site"
           ? "mb-16 mt-4 max-w-[1000px] flex-col-reverse lg:flex-row"
-          : "mt-0 max-w-[1150px] flex-row",
+          : "mt-0 max-w-[1000px] flex-row",
       )}
     >
       <SideList pageType={pageType} locale={locale} />
