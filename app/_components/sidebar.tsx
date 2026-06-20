@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { Fragment } from "react";
 import Image from "next/image";
 //import { sideList } from "@/lib/data";
 import { cn } from "@/lib/utils";
@@ -47,7 +47,7 @@ export function SideList({ pageType, locale }: Props) {
           switch (item.type) {
             case "intro":
               return (
-                <>
+                <Fragment key={i}>
                   <li key={i} className="mt-0 list-none p-0 pt-1 text-left">
                     <PSymbol pageType={pageType} /> {"- "}
                     {locale == "ua"
@@ -63,7 +63,7 @@ export function SideList({ pageType, locale }: Props) {
                       ? "Освоїв по тьюторіалу"
                       : "Went through tutorials"}
                   </li>
-                </>
+                </Fragment>
               );
             case "h2":
               return (

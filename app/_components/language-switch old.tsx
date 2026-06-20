@@ -1,37 +1,54 @@
-/* "use client";
+"use client";
 
-import { useTranslations } from "next-intl";
+//import { useTranslations } from "next-intl";
 import Link from "next/link";
-//import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, { ChangeEvent } from "react";
 
-import { useRouter, usePathname } from "@/navigation";
+//import { useRouter, usePathname } from "@/navigation";
+import { cn } from "@/lib/utils";
 
 export const LanguageSwitch = ({ locale }: { locale: string }) => {
-  const t = useTranslations("NavbarLinks");
   const pathname = usePathname();
   const router = useRouter();
+  const path = pathname.split("/").slice(2).join("/");
 
-  const handleLanguageChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    const newLocale = e.target.value as string;
-    const path = pathname.split("/").slice(2).join("/");
-    //router.push(`/${newLocale}/${path}`);
-
-    router.push(pathname, { locale: newLocale });
+  const handleLanguageChange = (newLocale: string) => {
+    //console.log("locale from LanguageSwitch:", locale);
+    //console.log("newLocale from LanguageSwitch:", newLocale);
+    if (newLocale !== locale) {
+      //console.log("path from LanguageSwitch:", path);
+      router.push(`/${newLocale}/${path}`);
+      router.refresh();
+      //for import { useRouter, usePathname } from "@/navigation";
+      //router.push(pathname, { locale: newLocale });
+    }
   };
   //console.log("locale from LanguageSwitch:", locale);
+  const anyStyle = "w-[30px] text-center";
+  const activeStyle = "font-semibold text-cyan-500 dark:text-blue-500";
+  const passiveStyle =
+    "cursor-pointer font-light text-blue-500 hover:text-cyan-500 dark:text-cyan-500 dark:hover:text-blue-500";
 
   return (
-    <div className="flex justify-between">
-      <select
-        value={locale}
-        onChange={handleLanguageChange}
-        className="rounded-md bg-transparent px-4 py-2 hover:outline-none focus:outline-none"
+    <div className="flex flex-row items-center justify-between gap-1">
+      {/* <Link href={`/${"en"}/${path}`}> */}
+      <div
+        onClick={() => handleLanguageChange("en")}
+        className={cn(anyStyle, locale === "en" ? activeStyle : passiveStyle)}
       >
-        <option value="en">EN</option>
-        <option value="fr">FR</option>
-      </select>
+        EN
+      </div>
+      {/*  </Link> */}
+      <div className="h-[18px] border-l border-cyan-500 dark:border-blue-500"></div>
+      {/*  <Link href={`/${"ua"}/${path}`}> */}
+      <div
+        onClick={() => handleLanguageChange("ua")}
+        className={cn(anyStyle, locale === "ua" ? activeStyle : passiveStyle)}
+      >
+        UA
+      </div>
+      {/*  </Link> */}
     </div>
   );
 };
- */

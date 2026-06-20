@@ -95,6 +95,7 @@ export const sideList = [
   },
   { text: "Stripe", knowledgeType: "p" },
   { text: "JS parsing, Puppeteer", knowledgeType: "t" },
+  { text: "FastAPI", knowledgeType: "t" },
 
   {
     type: "h3",
@@ -144,5 +145,5 @@ export const sideList = [
   },
   { text: "English: C1-C2", textUA: "Англійська: C1-C2" },
   { text: "Polish: B1-B2", textUA: "Польська: B1-B2" },
-  { text: "German: A1-A2", textUA: "Німецька: A1-A2" },
+  { text: "German: A2", textUA: "Німецька: A2" },
 ];
