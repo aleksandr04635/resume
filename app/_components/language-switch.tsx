@@ -7,6 +7,8 @@ import React, { ChangeEvent } from "react";
 
 //import { useRouter, usePathname } from "@/navigation";
 import { cn } from "@/lib/utils";
+import { GermanyFlag, GreatBritainFlag, UkraineFlag } from "@/lib/flags";
+import LanguageSwitchComp from "./LanguageSwitchComp";
 
 export const LanguageSwitch = ({ locale }: { locale: string }) => {
   const pathname = usePathname();
@@ -25,30 +27,16 @@ export const LanguageSwitch = ({ locale }: { locale: string }) => {
     }
   };
   //console.log("locale from LanguageSwitch:", locale);
-  const anyStyle = "w-[30px] text-center";
-  const activeStyle = "font-semibold text-cyan-500 dark:text-blue-500";
-  const passiveStyle =
-    "cursor-pointer font-light text-blue-500 hover:text-cyan-500 dark:text-cyan-500 dark:hover:text-blue-500";
 
   return (
     <div className="flex flex-row items-center justify-between gap-1">
-      {/* <Link href={`/${"en"}/${path}`}> */}
-      <div
-        onClick={() => handleLanguageChange("en")}
-        className={cn(anyStyle, locale === "en" ? activeStyle : passiveStyle)}
-      >
-        EN
-      </div>
-      {/*  </Link> */}
-      <div className="h-[18px] border-l border-cyan-500 dark:border-blue-500"></div>
-      {/*  <Link href={`/${"ua"}/${path}`}> */}
-      <div
-        onClick={() => handleLanguageChange("ua")}
-        className={cn(anyStyle, locale === "ua" ? activeStyle : passiveStyle)}
-      >
-        UA
-      </div>
-      {/*  </Link> */}
+      <LanguageSwitchComp
+        availableLocales={["de", "en", "uk"]} // Ваші componentsLokale
+        currentLocale={locale} // Ваш current Lokale (наприклад, з параметрів або hook)
+        onLanguageChange={handleLanguageChange} // Функція зміни мови
+      />
+
+      {/*  <UkraineFlag width={24} height={24} className="rounded-sm" /> */}
     </div>
   );
 };

@@ -12,73 +12,97 @@ export function MainList({ pageType, locale }: Props) {
   return (
     <div
       className={cn(
-        "mt-1 flex flex-col gap-2",
+        "mt-1 flex flex-col gap-1",
         pageType === "site" ? "text-base" : "text-sm",
       )}
     >
-      {mainList.map(({ type, text, textUA, Comp, CompUA }, i) => {
-        switch (type) {
-          case "h2":
-            return (
-              <h2
-                key={i}
-                className={cn(
-                  "mb-0 list-none p-0 font-semibold",
-                  pageType === "site" ? "mt-5 text-xl" : "mt-1 text-lg",
-                )}
-              >
-                {locale == "ua" && textUA ? textUA : text}
-                {/*   {text} */}
-              </h2>
-            );
-          case "h3":
-            return (
-              <h3
-                key={i}
-                className={cn(
-                  "mb-0 list-none p-0 text-base font-semibold",
-                  pageType === "site" ? "mt-6 text-base" : "mt-1 text-base",
-                )}
-              >
-                {locale == "ua" && textUA ? textUA : text}
-                {/*  {text} */}
-              </h3>
-            );
-          case "header-node":
-            return Comp ? (
-              <div
-                key={i}
-                className={cn(
-                  "mb-0 list-none p-0 text-base font-semibold",
-                  pageType === "site" ? "mt-6 text-base" : "mt-1 text-base",
-                )}
-              >
-                {locale == "ua" && CompUA ? <CompUA /> : <Comp />}
-                {/*  <Comp />{" "} */}
-              </div>
-            ) : null;
-          case "p-node":
-            return Comp ? (
-              <p
-                key={i}
-                className={cn(
-                  "mt-0 p-0",
-                  pageType === "site" ? "!text-base" : "",
-                )}
-              >
-                {locale == "ua" && CompUA ? <CompUA /> : <Comp />}
-                {/* <Comp /> */}
-              </p>
-            ) : null;
-          default:
-            return (
-              <p key={i} className="mt-0 p-0">
-                {locale == "ua" && textUA ? textUA : text}
-                {/*  {text} */}
-              </p>
-            );
-        }
-      })}
+      {mainList.map(
+        ({ type, text, textUA, textDE, Comp, CompDE, CompUA }, i) => {
+          switch (type) {
+            case "h2":
+              return (
+                <h2
+                  key={i}
+                  className={cn(
+                    "mb-0 list-none p-0 font-semibold",
+                    pageType === "site" ? "mt-2 text-lg" : "mt-1 text-lg",
+                  )}
+                >
+                  {locale == "uk" && textUA
+                    ? textUA
+                    : locale == "de" && textDE
+                      ? textDE
+                      : text}
+                </h2>
+              );
+            case "h3":
+              return (
+                <h3
+                  key={i}
+                  className={cn(
+                    "mb-0 list-none p-0 text-base font-semibold",
+                    pageType === "site" ? "mt-2 text-base" : "mt-1 text-base",
+                  )}
+                >
+                  {locale == "uk" && textUA
+                    ? textUA
+                    : locale == "de" && textDE
+                      ? textDE
+                      : text}
+                  {/* {locale == "uk" && textUA ? textUA : text} */}
+                </h3>
+              );
+            case "header-node":
+              return Comp ? (
+                <div
+                  key={i}
+                  className={cn(
+                    "mb-0 list-none p-0 text-base font-semibold",
+                    pageType === "site" ? "mt-0 text-base" : "mt-1 text-base",
+                  )}
+                >
+                  {locale == "uk" && CompUA ? (
+                    <CompUA />
+                  ) : locale == "de" && CompDE ? (
+                    <CompDE />
+                  ) : (
+                    <Comp />
+                  )}
+                  {/*  {locale == "uk" && CompUA ? <CompUA /> : <Comp />} */}
+                </div>
+              ) : null;
+            case "p-node":
+              return Comp ? (
+                <p
+                  key={i}
+                  className={cn(
+                    "mt-0 p-0",
+                    pageType === "site" ? "!text-sm" : "",
+                  )}
+                >
+                  {locale == "uk" && CompUA ? (
+                    <CompUA />
+                  ) : locale == "de" && CompDE ? (
+                    <CompDE />
+                  ) : (
+                    <Comp />
+                  )}
+                  {/* {locale == "uk" && CompUA ? <CompUA /> : <Comp />} */}
+                </p>
+              ) : null;
+            default:
+              return (
+                <p key={i} className="mt-0 p-0 text-sm">
+                  {locale == "uk" && textUA
+                    ? textUA
+                    : locale == "de" && textDE
+                      ? textDE
+                      : text}
+                </p>
+              );
+          }
+        },
+      )}
 
       {/*   <div>
         

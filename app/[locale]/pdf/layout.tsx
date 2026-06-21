@@ -20,17 +20,8 @@ export default async function RootLayout({
   // bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] dark:from-[#065179] dark:to-[#0e1425]
   //dark:bg-[radial-gradient(ellipse_at_top,_hsl(201,91%,20%)_0%,_hsl(224,45%,7%)_100%)]
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <div
-        className={cn(
-          "relative flex min-h-screen w-full flex-col",
-          "dark:bg-[radial-gradient(ellipse_at_top,_hsl(206,95%,20%)_0%,_hsl(224,45%,5%)_100%)]",
-        )}
-      >
-        <Header locale={locale} />
-        <main className="mb-[63px] pr-[20px]">{children}</main>
-        <Footer locale={locale} />
-      </div>
-    </ThemeProvider>
+    <div className={cn("relative flex min-h-screen w-full flex-col")}>
+      <main className="pr-[10px]">{children}</main>
+    </div>
   );
 }

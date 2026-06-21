@@ -633,13 +633,13 @@ export const mainList = [
     ),
   },
 
-  /*   {
+  {
     text: "I left the company because, due to the conditions in Ukraine, it was unable to secure new projects.",
     textUA:
       "Я припинив роботу в компанії, оскільки через умови в Україні вона не могла знайти нові проєкти.",
     textDE:
       "Ich habe meine Tätigkeit im Unternehmen beendet, da es aufgrund der Lage in der Ukraine keine neuen Projekte finden konnte.",
-  }, */
+  },
 
   {
     type: "header-node",
@@ -738,13 +738,13 @@ export const mainList = [
     textDE:
       "Als erster von vielen Junior-Entwicklern, die vom Unternehmen eingestellt wurden, wurde ich zum Supervisor befördert und habe drei weitere Junior-Entwickler in den Arbeitsablauf des Unternehmens eingeführt, die Aufgaben, die ich vom Projektkoordinator erhalten habe, in Aufgaben für sie aufgeteilt, die Reviews ihres Codes durchgeführt und ihre Branches in übergeordnete Branches gemergt, die den übergeordneten Aufgaben entsprachen.",
   },
-  /*   {
+  {
     text: "I left this job because a recruiter from another company offered me a much better salary.",
     textUA:
       "Я звільнився з цієї роботи, тому що рекрутер з іншої компанії запропонував мені набагато кращу зарплату.",
     textDE:
       "Ich habe diesen Job gekündigt, weil mir ein Recruiter von einem anderen Unternehmen ein viel besseres Gehalt angeboten hat.",
-  }, */
+  },
   {
     type: "h3",
     text: "Full-Stack Web Developer at SMM Oksima Group",
@@ -917,12 +917,12 @@ export const mainList = [
     textDE:
       "Bei der Arbeit mit Next.js 14 mit PostgreSQL/Prisma ORM ermöglicht es die Benutzerauthentifizierung mit der Rolle einer Marke (Brand) oder eines Partners (Affiliate) durch die Kombination von E-Mail und Passwort unter Verwendung von Auth.js, mit E-Mail-Verifizierung und Zurücksetzen des Passworts via E-Mail-Versand, erfasst Benutzerdaten in Formularen, die mit react-hook-form mit Eingabemaskierung und Zod-Eingabevalidierung erstellt wurden, und gibt diese in Form von Tabellen auf breiten Bildschirmen aus, die auf Mobilgeräten als durch Gesten horizontal wischbare Listen dargestellt werden, für die Erstellung von Werbeangeboten (Offers) durch Benutzer mit dem Status Brand und Medienkanälen (Media Channels) durch Benutzer mit dem Status Affiliate, die sie besitzen und in denen sie die Platzierung von Werbung anbieten, sowie mit der Möglichkeit für Affiliates, Werbeangebote von Brands anzunehmen, wobei Benutzer mit dem Status Manager in der aktuellen Version alle Finanztransaktionen manuell verwalten und den Status von Offers und Media Channels verifizieren, mit der Möglichkeit, diese sowie alle Finanzeigenschaften der Benutzer zu bearbeiten.",
   },
-  /*  {
+  {
     text: "I quit the job when it became clear that they weren't going to pay me.",
     textUA: "Я звільнився, коли стало зрозуміло, що мені не будуть платити.",
     textDE:
       "Ich habe gekündigt, als klar wurde, dass sie mich nicht bezahlen würden.",
-  }, */
+  },
   /*   {
     type: "h3",
     text: "Junior Researcher in Particles Physics in Non-linear Spaces in Bogolyubov Institute for Theoretical Physics of the National Academy of Sciences of Ukraine, Kyiv",
@@ -978,7 +978,7 @@ export const mainList = [
     textUA:
       "Я створив обидва ці проекти самостійно, починаючи від створених мною історій користувачів, а потім від структури бази даних до дизайну інтерфейсу користувача, який я створив і інтегрував як елементи існуючих проектів, так і матеріали безпосередньо з технічної документації використаних бібліотек. Ви можете переконатися в цьому, переглянувши ці сайти.",
     textDE:
-      "Ich habe beide Projekte selbstständig realisiert – angefangen bei den von mir erfundenen User Stories über die Datenbankstruktur bis zum UI-Design. Dabei habe ich sowohl Elemente bestehender Projekte als auch Materialien direkt aus der technischen Dokumentation der verwendeten Bibliotheken kreiert und integriert. Davon können Sie sich selbst überzeugen, indem Sie einfach einen Blick auf diese Websites werfen.",
+      "Ich habe beide Projekte selbstständig realisiert – angefangen bei den von mir erfundenen User Stories über die Datenbankstruktur до zum UI-Design. Dabei habe ich sowohl Elemente bestehender Projekte als auch Materialien direkt aus der technischen Dokumentation der verwendeten Bibliotheken kreiert und integriert. Davon können Sie sich selbst überzeugen, indem Sie einfach einen Blick auf diese Websites werfen.",
   },
   {
     type: "header-node",
@@ -1125,48 +1125,36 @@ export const mainList = [
     text: "Next.js 14 marketplace with Postgres DB accessed via Prisma , which not only allows users to create products, but create whole categories of products with arbitrary structure of product properties. Moreover, full product filtering with pagination over this user-created structure is implemented, and over prices as well.",
     textUA:
       "Торговий майданчик на Next.js 14 з БД Postgres через Prisma DB, що дозволяє всім користувачам не тільки створювати продукти, але й створювати цілі категорії продуктів із довільною структурою властивостей продукту. Крім того, реалізована повна система фільтрація товарів із розбивкою на сторінки за цією створеною користувачем структурою, а також за цінами.",
-    textDE:
-      "Next.js 14 Marktplatz mit Postgres-DB-Zugriff über Prisma, der es Benutzern nicht nur ermöglicht, Produkte zu erstellen, sondern ganze Produktkategorien mit beliebiger Struktur der Produkteigenschaften. Zudem ist eine vollständige Produktfilterung mit Pagination über diese benutzerdefinierte Struktur sowie über Preise implementiert.",
   },
   {
     text: "For authentication Auth.js (Next-Auth V5) is used with options of Google and Github OAuth and email-password authentication, with emails sending for email verification, password resetting, and optional 2-factor authentication.",
     textUA:
       "Для автентифікації використовується Auth.js (Next-Auth V5)  з опціями Google і Github OAuth і комбінації пароля та електронної пошти, з надсиланням електронних листів для підтвердження електронної пошти, скидання пароля та додаткової 2-факторної автентифікації.",
-    textDE:
-      "Für die Authentifizierung wird Auth.js (Next-Auth V5) mit Optionen für Google- und GitHub-OAuth sowie E-Mail/Passwort-Authentifizierung verwendet, inklusive E-Mail-Versand für E-Mail-Verifizierung, Passwort-Zurücksetzung und optionaler 2-Faktor-Authentifizierung.",
   },
   {
     text: "Redux is used for the products cart.",
     textUA: "Redux використовується для кошика продуктів.",
-    textDE: "Redux wird für den Warenkorb verwendet.",
   },
   {
     text: "Shadcn-ui is used for UI everywhere. ",
     textUA: "Shadcn-ui використовується для UI всюди.",
-    textDE: "Shadcn-ui wird überall für die UI verwendet.",
   },
   {
     text: "A rich text editor is integrated for product descriptions.",
     textUA: "Для описів продуктів інтегрований редактор форматованого тексту.",
-    textDE: "Ein Rich-Text-Editor ist für Produktbeschreibungen integriert.",
   },
   {
     text: "Stripe integration allows for simulating payments and changing order status via the webhook both for buyer and seller.",
     textUA:
       "Інтеграція Stripe дозволяє імітувати платежі та змінювати статус замовлення через вебхук як для покупця, так і для продавця.",
-    textDE:
-      "Die Stripe-Integration ermöglicht die Simulation von Zahlungen und die Änderung des Bestellstatus über Webhooks sowohl für Käufer als auch für Verkäufer.",
   },
   {
     text: "Forms use the combination of react-hook-form, Zod, and Shadcn-UI.",
     textUA: "Форми використовують комбінацію react-hook-form, Zod і Shadcn-UI.",
-    textDE:
-      "Formulare verwenden die Kombination aus react-hook-form, Zod und Shadcn-UI.",
   },
   {
     text: "The entire project is written in Typescript. ",
     textUA: "Весь проект написаний на Typescript.",
-    textDE: "Das gesamte Projekt ist in TypeScript geschrieben.",
   },
   {
     type: "p-node",

@@ -17,18 +17,37 @@ export const Header = ({ locale }: { locale: string }) => {
   //https://drive.google.com/file/d/1v_ktmw6ZJZUdb_vmEracpNTzZkQ3Il4u/view?usp=sharing
   //https://drive.google.com/file/d/1SY_ZeV_ZNMejCiZapD9tXkyNNAVDrqeo/view?usp=sharing
   //console.log("locale in Header:", locale);
-  const fileId =
-    locale == "ua"
+  /*   const fileId =
+    locale == "uk"
       ? "1v_ktmw6ZJZUdb_vmEracpNTzZkQ3Il4u"
       : "1SY_ZeV_ZNMejCiZapD9tXkyNNAVDrqeo";
+ */
+  //de
+  //https://drive.google.com/file/d/1J1pmVFDfS807cr0t_Xqs1W-lj4dS_a6p/view?usp=sharing
+  //en
+  //https://drive.google.com/file/d/1ndm4ymXF2QKZqUdR8wwU8xcxm7bAwKgx/view?usp=sharing
+  //uk
+  //https://drive.google.com/file/d/1zD866-e9xpo-bURVucEBAQvBSd9Ro4GF/view?usp=sharing
+  let fileId;
+  switch (locale) {
+    case "uk":
+      fileId = "1zD866-e9xpo-bURVucEBAQvBSd9Ro4GF";
+      break;
+    case "de":
+      fileId = "1J1pmVFDfS807cr0t_Xqs1W-lj4dS_a6p";
+      break;
+    default: // "en" или любой другой язык по умолчанию
+      fileId = "1ndm4ymXF2QKZqUdR8wwU8xcxm7bAwKgx";
+      break;
+  }
 
   const downloadLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
 
   //dark:border-none
   return (
-    <nav className="h-fit w-full border-b border-layout-border bg-white py-1 pl-1 shadow-sm dark:bg-dark-additional-bg/40 sm:py-3 sm:pl-4 sm:pr-[35px]">
+    <header className="h-fit w-full border-b border-layout-border bg-white py-1 pl-1 shadow-sm dark:bg-dark-additional-bg/40 sm:py-3 sm:pl-4 sm:pr-[35px]">
       {/* <div className="flex w-full flex-col"> */}
-      <div className="flex w-full flex-col items-center justify-between gap-1 sm:flex-row sm:gap-16">
+      <div className="flex w-full flex-col items-center justify-between gap-1 sm:flex-row sm:gap-8">
         <div className="flex w-full flex-col flex-wrap items-center justify-between gap-1 sm:w-3/4 sm:flex-row">
           <Link
             target="_blank"
@@ -98,13 +117,15 @@ export const Header = ({ locale }: { locale: string }) => {
           >
             {t("pdf")}
           </Link>
-          <LanguageSwitch locale={locale} />
-          <div className="flex w-fit items-center justify-center gap-2">
-            <ThemeSwitch />
+          <div className="flex min-w-[200px] items-center justify-between gap-1">
+            <LanguageSwitch locale={locale} />
+            <div className="flex w-fit items-center justify-center gap-2">
+              <ThemeSwitch />
+            </div>
           </div>
         </div>
       </div>
       {/*   </div> */}
-    </nav>
+    </header>
   );
 };

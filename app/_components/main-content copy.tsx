@@ -7,17 +7,14 @@ import { cn } from "@/lib/utils";
 
 type Props = { pageType: "site" | "pdf"; locale: string };
 
-/* : "mt-0 flex-col md:flex-row-reverse", */
 function MainContent({ pageType, locale }: Props) {
-  //console.log("MainContent pageType: ", pageType);
-
   return (
     <div
       className={cn(
-        "flex px-1 py-0 text-justify",
+        "mx-auto flex gap-5 px-1 py-0 text-justify",
         pageType === "site"
-          ? "mx-auto mb-16 mt-4 max-w-[1000px] flex-col gap-3 lg:flex-row-reverse"
-          : "mt-0 flex-col gap-1 md:flex-row-reverse",
+          ? "mb-16 mt-4 max-w-[1000px] flex-col lg:flex-row-reverse"
+          : "mt-0 max-w-[1000px] flex-row-reverse",
       )}
     >
       <div className="flex flex-col pl-2">

@@ -1,0 +1,29 @@
+{
+  "Header": {
+    "title": "Oleksandr Liashchenko - Lebenslauf",
+    "description": "Oleksandr Liashchenko - Full-Stack Webentwickler",
+    "pdf": "PDF herunterladen",
+    "my-marketplace": "Mein Marktplatz",
+    "my-blog": "Mein Blog"
+  },
+  "Contacts": {
+    "name": "Oleksandr Liashchenko",
+    "title": "Full-Stack Webentwickler",
+    "location": "Standort: 06886 Lutherstadt Wittenberg, Deutschland",
+    "location-n": "Standort:",
+    "location-w": "06886 Lutherstadt Wittenberg, Deutschland",
+    "work-type": "Arbeitsmodell: Vollzeit, Remote bevorzugt, vor Ort deutschlandweit (umzugsbereit)",
+    "work-type-n": "Arbeitsmodell:  ",
+    "work-type-w": "Vollzeit, Remote bevorzugt, Vor-Ort-Arbeit deutschlandweit (umzugsbereit)",
+    "phone": "Telefon: ",
+    "site": "Meine Portfolio-Webseite"
+  },
+  "Skills": {
+    "skills": "Kenntnisse:",
+    "practical": "Ich habe es in mindestens einem Projekt verwendet",
+    "theoretical": "Ich habe es mit Tutorials gelernt"
+  },
+  "NotFoundPage": {
+    "title": "Nicht gefunden"
+  }
+}

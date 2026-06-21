@@ -9,12 +9,19 @@
   "Contacts": {
     "name": "Oleksandr Liashchenko",
     "title": "Full-Stack Web Developer",
-    "location": "Location: Kyiv, Ukraine",
-    "work-type": "Work remotely only",
-    "phone": "Phone: "
+    "location": "Location: 06886  Lutherstadt Wittenberg, Germany",
+    "location-n": "Location: ",
+    "location-w": "06886  Lutherstadt Wittenberg, Germany",
+    "work-type": "Work model: Full-time, remote preferred, on-site nationwide within Germany (open to relocation)",
+    "work-type-n": "Work\u00A0model:  ",
+    "work-type-w": "Full-time, remote preferred, on-site nationwide within Germany (open to relocation)",
+    "phone": "Phone: ",
+    "site": "My Portfolio Website"
   },
   "Skills": {
-    "skills": "Skills:"
+    "skills": "Skills:",
+    "practical": "I used it in at least one project",
+    "theoretical": "I learned it with tutorials"
   },
   "NotFoundPage": {
     "title": "Not Found"

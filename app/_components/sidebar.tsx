@@ -5,6 +5,7 @@ import Image from "next/image";
 //import { sideList } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { sideList } from "@/lib/side-data";
+import { useTranslations } from "next-intl";
 
 type Props = { pageType: "site" | "pdf"; locale: string };
 type PropsC = { pageType: "site" | "pdf" };
@@ -34,34 +35,36 @@ function TSymbol({ pageType }: PropsC) {
 
 export function SideList({ pageType, locale }: Props) {
   // console.log("locale from SideList:", locale);
+  const t = useTranslations("Skills");
 
+  /*   pageType === "site" ? "min-w-[290px]" : "min-w-[240px]", */
   return (
-    <div
-      className={cn(
-        "pl-5 pr-3",
-        pageType === "site" ? "min-w-[290px]" : "min-w-[240px]",
-      )}
+    <aside
+      className={cn("pl-5 pr-3", pageType === "site" ? "min-w-[290px]" : "")}
     >
-      <ul className={cn("", pageType === "site" ? "text-base" : "text-sm")}>
+      <ul className={cn("", pageType === "site" ? "text-sm" : "text-sm")}>
         {sideList.map((item, i) => {
+          let toWrite =
+            locale == "uk" && item.textUA
+              ? item.textUA
+              : locale == "de" && item.textDE
+                ? item.textDE
+                : item.text;
           switch (item.type) {
+            /*  only the introduction */
             case "intro":
               return (
                 <Fragment key={i}>
                   <li key={i} className="mt-0 list-none p-0 pt-1 text-left">
                     <PSymbol pageType={pageType} /> {"- "}
-                    {locale == "ua"
-                      ? "Використовував мінімум в одному проєкті"
-                      : "Used in at least one project"}
+                    {t("practical")}
                   </li>
                   <li
                     key={i + "intro2"}
                     className="mt-0 list-none p-0 pt-1 text-left"
                   >
                     <TSymbol pageType={pageType} /> {"- "}
-                    {locale == "ua"
-                      ? "Освоїв по тьюторіалу"
-                      : "Went through tutorials"}
+                    {t("theoretical")}
                   </li>
                 </Fragment>
               );
@@ -69,9 +72,9 @@ export function SideList({ pageType, locale }: Props) {
               return (
                 <li
                   key={i}
-                  className="mb-0 mt-0 list-none p-0 text-lg font-semibold"
+                  className="mb-0 mt-0 list-none p-0 text-left text-lg font-semibold"
                 >
-                  {locale == "ua" && item.textUA ? item.textUA : item.text}
+                  {toWrite}
                 </li>
               );
             case "h3":
@@ -79,117 +82,43 @@ export function SideList({ pageType, locale }: Props) {
                 <li
                   key={i}
                   className={cn(
-                    "mb-0 mt-2 list-none p-0 text-base font-semibold",
-                    pageType === "site" ? "mt-5 text-lg" : "mt-1 text-base",
+                    "mb-0 mt-2 list-none p-0 text-left text-base font-semibold",
+                    pageType === "site" ? "mt-3 text-lg" : "mt-1 text-base",
                   )}
                 >
-                  {locale == "ua" && item.textUA ? item.textUA : item.text}
+                  {toWrite}
                 </li>
               );
             default:
               return (
-                /* <li
-                  key={i}
-                  className="mt-0 list-image-[url(/li-for-light.svg)] p-0 text-left dark:list-image-[url(/li-for-dark.svg)]"
-                >
-                   {locale == "ua" && item.textUA ? item.textUA : item.text} 
-                  
-                </li> */
                 <li
                   key={i}
-                  className="mt-0 list-image-[url(/li-for-light.svg)] px-0 pt-1 text-left dark:list-image-[url(/li-for-dark.svg)]"
+                  /*  className={cn(
+                    "mt-0 px-0 text-left",
+                    pageType === "site"
+                      ? "list-image-[url(/li-for-light.svg)] pt-1 dark:list-image-[url(/li-for-dark.svg)]"
+                      : "list-none pt-1",
+                  )} */
+                  className={cn(
+                    "mt-0 list-image-[url(/li-for-light.svg)] px-0 text-left dark:list-image-[url(/li-for-dark.svg)]",
+                    pageType === "site" ? "pt-1" : "pt-1",
+                  )}
                 >
                   <div className="flex flex-row justify-between gap-2">
-                    <div>
-                      {locale == "ua" && item.textUA ? item.textUA : item.text}
-                    </div>
+                    <div className="">{toWrite}</div>
 
-                    {item.knowledgeType == "p" ? (
+                    {/*  AI told to remove this */}
+                    {/*    {item.knowledgeType == "p" ? (
                       <PSymbol pageType={pageType} />
                     ) : item.knowledgeType == "t" ? (
                       <TSymbol pageType={pageType} />
-                    ) : null}
+                    ) : null} */}
                   </div>
                 </li>
               );
           }
         })}
       </ul>
-      {/*  <h2 className="mt-0 text-base font-semibold">Skills</h2>
-      <h3 className="mt-0 text-base font-semibold">Web Development</h3>
-      <div className="mt-0 text-left text-sm">
-        <ul>
-          <li>html</li>
-          <li>CSS</li>
-          <li>SASS</li>
-          <li>Javascript, Typescript</li>
-          <li>React.js</li>
-          <li>Node.js, Express.js</li>
-          <li>Next.js</li>
-          <li>Mongo/Mongoose</li>
-          <li>MySQL, Postgres</li>
-          <li>Prisma ORM</li>
-          <li>Redux Toolkit Query</li>
-          <li>React Query</li>
-          <li>UI libraries: Tailwind, Shadcn/ui, Flowbite</li>
-          <li>
-            UI features: dark theme, horizontal swiping, pagination, comments
-            tree, tooltips
-          </li>
-          <li>Forms: react-hook-form, Zod, input masking</li>
-          <li>Tables: tanstack/react-table, sorting, filtering, pagination</li>
-          <li>WebSockets</li>
-          <li>TinyMCE rich text editor</li>
-          <li>Image uploading: Cloudinary, Firebase</li>
-          <li>Email sending: Nodemailer, Resend</li>
-          <li>Template engines: Handlebars, Pug</li>
-          <li>Manual QA/QC, TestRail</li>
-          <li>React Testing Library, Jest</li>
-          <li>Postman, Insomnia, Thunder Client</li>
-          <li>Gulp</li>
-          <li>Figma</li>
-          <li>JS parsing, Puppeteer</li>
-          <li>Stripe</li>
-          <li>Jira</li>
-          <li>Git: Github, Gitlab</li>
-          <li>Docker</li>
-        </ul>
-      </div>
-      <h3 className="mt-0 text-left font-semibold">Data analysis</h3>
-      <div className="mt-0 text-left text-sm">
-        <ul>
-          <li>Python: Pandas, NumPy, Matplotlib, SciPy</li>
-          <li>Mathematica, Maple</li>
-          <li>Tableau</li>
-          <li>Excel, PowerPoint</li>
-        </ul>
-      </div>
-      <h3 className="mt-0 font-semibold">Languages</h3>
-      <div className="mt-0 text-sm">
-        <ul>
-          <li>Ukrainian, Russian: native</li>
-          <li>English: C1-C2</li>
-          <li>Polish: B1-B2</li>
-        </ul>
-      </div>
-      <h3 className="mt-0 font-semibold">Soft skills</h3>
-      <div className="mt-0 text-sm">
-        <ul>
-          <li>Kanban, Scrum</li>
-          <li>Teamwork</li>
-          <li>GTD</li>
-        </ul>
-      </div>
-      <h3 className="mt-0 text-left font-semibold">Science</h3>
-      <div className="mt-0 text-left text-sm">
-        <ul>
-          <li>Theoretical Physics: Quantum Mechanics in non-linear spaces</li>
-          <li>
-            Mathematics in the volume, necessary for theoretical physics:
-            Calculus, Linear algebra, Group Theory
-          </li>
-        </ul>
-      </div> */}
-    </div>
+    </aside>
   );
 }

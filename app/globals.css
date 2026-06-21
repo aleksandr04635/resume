@@ -208,3 +208,8 @@ ul li {
 p {
   @apply py-0.5 indent-2;
 }
+
+/* * {
+  outline: 1px solid red !important;
+}
+ */

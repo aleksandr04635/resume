@@ -1,4 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
+
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
 
 import { Inter } from "next/font/google";
@@ -37,11 +40,16 @@ export async function generateMetadata({ params }: any) {
 export default async function RootLayout({
   children,
   params,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-  params: any;
-}>) {
+  params: Promise<{ locale: string }>; // Must be a Promise in Next 15!
+}) {
   const { locale } = await params;
+  // Validate that the incoming route matches your allowed locales
+  /*  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  } */
+
   const messages = await getMessages();
   return (
     <html lang={locale}>

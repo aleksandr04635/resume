@@ -43,8 +43,8 @@ export const LanguageSwitch = ({ locale }: { locale: string }) => {
       <div className="h-[18px] border-l border-cyan-500 dark:border-blue-500"></div>
       {/*  <Link href={`/${"ua"}/${path}`}> */}
       <div
-        onClick={() => handleLanguageChange("ua")}
-        className={cn(anyStyle, locale === "ua" ? activeStyle : passiveStyle)}
+        onClick={() => handleLanguageChange("uk")}
+        className={cn(anyStyle, locale === "uk" ? activeStyle : passiveStyle)}
       >
         UA
       </div>

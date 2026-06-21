@@ -8,7 +8,7 @@ export const Footer = ({ locale }: { locale: string }) => {
   const t = useTranslations("Contacts");
   //absolute bottom-0  bg-secondary
   return (
-    <div className="absolute bottom-0 flex h-16 w-full items-center justify-between rounded-none border-t border-layout-border bg-white pr-[20px] dark:bg-dark-additional-bg/40">
+    <footer className="absolute bottom-0 flex h-16 w-full items-center justify-between rounded-none border-t border-layout-border bg-white pr-[20px] dark:bg-dark-additional-bg/40">
       <Link
         className="link-stand ml-10"
         href="/"
@@ -26,6 +26,6 @@ export const Footer = ({ locale }: { locale: string }) => {
       >
         <BsGithub className="h-6 w-6" />
       </Link>
-    </div>
+    </footer>
   );
 };
